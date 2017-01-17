@@ -1,0 +1,271 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{ctex}
+\usepackage{enumerate}
+\usepackage{times}
+\usepackage{multirow}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\begin{document}
+  \title{论题~1-2~作业}
+  \author{姓名：陈劭源 \and 学号：161240004}
+  \date{}
+  \maketitle
+
+  \section{[UD] Problem 2.1}
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+          \hline
+           & Antecedent & Conclusion \\  \hline
+          (a) & It is raining. & I will stay at home. \\  \hline
+          (b) & The baby cries. & I wake up. \\\hline
+          (c) & The fire alarm goes off. & I wake up. \\  \hline
+          (d) & $x$ is odd. & $x$ is prime. \\  \hline
+          (e) & $x$ is odd. & $x$ is prime. \\  \hline
+          (f) & You have an invitation. & You can come to the party. \\ \hline
+          (g) & The bell rings. & I leave the house. \\  \hline
+        \end{tabular}
+    \end{center}
+
+  \section{[UD] Problem 2.5}
+    Truth table:
+    \begin{center}
+    \begin{tabular}{c|c|c|c}
+      $\mathbf P$ & $\mathbf Q$ & $\mathbf R$ & $(\mathbf P \rightarrow (\neg \mathbf R \vee \mathbf Q)) \wedge \mathbf R $ \\ \hline
+      $T$ & $T$ & $T$ & $T$ \\
+      $T$ & $T$ & $F$ & $F$ \\
+      $T$ & $F$ & $T$ & $F$ \\
+      $T$ & $F$ & $F$ & $F$ \\
+      $F$ & $T$ & $T$ & $T$ \\
+      $F$ & $T$ & $F$ & $F$ \\
+      $F$ & $F$ & $T$ & $T$ \\
+      $F$ & $F$ & $F$ & $F$ \\
+    \end{tabular}
+    \end{center}
+    \par The statement form is neither a tautology nor a contradiction.
+
+  \section{[UD] Problem 2.6}
+  \begin{enumerate}[(a)]
+    \item I won't do my homework or I won't pass this class.
+    \item Seven is not an integer or seven is not even.
+    \item $T$ is continuous and $T$ is not bounded.
+    \item I can't eat dinner and I can't go to the show.
+    \item $x$ is odd and $x$ is not prime.
+    \item $x$ is odd and $x$ is not prime.
+    \item I am not home, and Sam won't answer the phone or he won't tell you how to reach me.
+    \item The stars are green or the white horse is shining, and the world isn't eleven feet wide.
+  \end{enumerate}
+
+  \section{[UD] Problem 2.7}
+  \begin{enumerate}[(a)]
+    \item $\neg(\neg P) \leftrightarrow P$
+    \item $\neg(P \vee Q) \leftrightarrow (\neg P \wedge \neg Q)$
+    \item $\neg(P \wedge Q) \leftrightarrow (\neg P \vee \neg Q)$
+    \item $(P \rightarrow Q) \leftrightarrow (\neg P \vee Q)$
+  \end{enumerate}
+
+  \section{[UD] Problem 2.8}
+  $(P \wedge Q) \vee R$
+
+  \section{[UD] Problem 2.10}
+  \begin{enumerate}[(a)]
+    \item It is not the case that it doesn't snow and it is sunny.
+    \item It doesn't snow and it is sunny.
+  \end{enumerate}
+
+  \section{[UD] Problem 2.11}
+  \begin{enumerate}[(a)]
+    \item Let $A$ represent ``I am a truth teller'', $B$ represent ``each person living on this island is either a truth teller or a liar'' which is true. The statement $(A \rightarrow B) \leftrightarrow A$, which is equivalent to $\mathbf{T} \leftrightarrow A$ should be true, so $A$ must be true, i.e. Arnie is a \textbf{truth-teller}.
+    \item Let $A$ represent ``I am a truth teller'', and $B$ represent ``Barnie is a truth teller''. The statement $(A \rightarrow B) \leftrightarrow A$ should be true.
+        \begin{center}
+        \begin{tabular}{c|c|c}
+          $\mathbf A$ & $\mathbf B$ & $(\mathbf A \rightarrow \mathbf B) \leftrightarrow \mathbf A $ \\ \hline
+          $T$ & $T$ & $T$ \\
+          $T$ & $F$ & $F$ \\
+          $F$ & $T$ & $F$ \\
+          $T$ & $F$ & $F$ \\
+        \end{tabular}
+        \end{center}
+        So Arnie and Barnie are \textbf{both truth-tellers}.
+  \end{enumerate}
+
+  \section{[UD] Problem 3.2}
+  \begin{enumerate}[(a)]
+    \item Contrapositive: If you don't live in a white house, then you aren't the President of the United States.\\
+        Converse: If you live in a white house, then you are the President of the United States.
+    \item Contrapositive: If you don't need eggs, then you are not going to bake a souffl\'{e}. \\
+        Converse: If you need eggs, then you are going to bake a souffl\'{e}.
+    \item Contrapositive: If $x$ is not an integer, then $x$ is not a real number. \\
+        Converse: If $x$ is an integer, then $x$ is a real number.
+    \item Contrapositive: If $x^2 \geq 0$, then $x$ is not a real number. \\
+        Converse: If $x^2 < 0$, then $x$ is a real number.
+  \end{enumerate}
+
+  \section{[UD] Problem 3.6}
+    Let $P$ represents Matilda eats cereal, $Q$ represent bread and $R$ represent yogurt. Then the following four statements are all true: $(P \wedge Q) \rightarrow R$, $(Q \vee R) \rightarrow P$, $\neg(P \wedge R)$, $Q \vee P$.
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c|c|c}
+      $\mathbf P$ & $\mathbf Q$ & $\mathbf R$ & $(\mathbf P \wedge \mathbf Q) \rightarrow \mathbf R$ & $(\mathbf Q \vee \mathbf R) \rightarrow \mathbf P$ & $\neg(\mathbf P \wedge \mathbf R)$ & $\mathbf Q \vee \mathbf P$  \\ \hline
+      $T$ & $T$ & $T$ & $T$ & $T$ & $F$ & $T$ \\
+      $T$ & $T$ & $F$ & $F$ & $T$ & $T$ & $T$ \\
+      $T$ & $F$ & $T$ & $T$ & $T$ & $F$ & $T$ \\
+      $T$ & $F$ & $F$ & $T$ & $T$ & $T$ & $T$ \\
+      $F$ & $T$ & $T$ & $T$ & $F$ & $T$ & $T$ \\
+      $F$ & $T$ & $F$ & $T$ & $F$ & $T$ & $T$ \\
+      $F$ & $F$ & $T$ & $T$ & $F$ & $T$ & $F$ \\
+      $F$ & $F$ & $F$ & $T$ & $T$ & $T$ & $F$ \\
+    \end{tabular}
+    \end{center}
+    We can conclude from the truth table that the four statements are all true if and only if $P$ is true and $Q$, $R$ are false. So Matilda eats \textbf{cereal} on Monday.
+
+  \section{[UD] Problem 3.7}
+  \begin{enumerate}[(a)]
+    \item
+        \begin{tabular}{|c|l|}
+          \hline
+          Letter & \multicolumn{1}{|c|}{Substatement} \\ \hline
+          $P$ & The coat is green. \\ \hline
+          $Q$ & The moon is full. \\ \hline
+          $R$ & The cow jumps over the moon. \\ \hline
+        \end{tabular}\par
+    Original statement: $P \rightarrow (Q \vee R)$
+    \item Contrapositive: $(\neg Q \wedge \neg R) \rightarrow \neg P$ \\
+        If the moon isn't full and the cow doesn't jump over it, then the coat isn't green.
+    \item Converse: $(Q \vee R) \rightarrow P$ \\
+        If the moon is full or the cow jumps over it, then the coat is green.
+    \item Negation: $P \wedge \neg Q \wedge \neg R$ \\
+        The coat is green, and the moon isn't full, and the cow doesn't jump over it.
+    \item The original statement and its contrapositive are equivalent.
+  \end{enumerate}
+
+  \section{[UD] Problem 3.8}
+  \begin{enumerate}[(a)]
+    \item Truth table:
+    \begin{center}
+    \begin{tabular}{c|c|c|c}
+      $\mathbf P$ & $\mathbf Q$ & $\mathbf P \rightarrow \mathbf Q$ & $\mathbf P \rightarrow (\mathbf Q \vee \neg \mathbf P)$ \\
+      \hline
+      $T$ & $T$ & $T$ & $T$ \\
+      $T$ & $F$ & $F$ & $F$ \\
+      $F$ & $T$ & $T$ & $T$ \\
+      $F$ & $F$ & $T$ & $T$ \\
+    \end{tabular}
+    \end{center}
+    \item The two statements are equivalent.
+  \end{enumerate}
+
+  \section{[UD] Problem 3.9}
+    First, consider the chocolate. Let $P_1$, $Q_1$, $R_1$, $S_1$ represent the French, the Swiss, the German and the American recipes use semisweet chocolate respectively, and exactly three of them are true. These statements should be true: $\neg (Q_1 \leftrightarrow R_1)$, $\neg (R_1 \leftrightarrow S_1)$. Construct the truth table:
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c|c}
+      $\mathbf{P_1}$ & $\mathbf{Q_1}$ & $\mathbf{R_1}$ & $\mathbf{S_1}$ & $\neg (\mathbf{Q_1} \leftrightarrow \mathbf{R_1})$ & $\neg (\mathbf{R_1} \leftrightarrow \mathbf{S_1})$ \\
+      \hline
+      $T$ & $T$ & $T$ & $F$ & $F$ & $T$ \\
+      $T$ & $T$ & $F$ & $T$ & $T$ & $T$ \\
+      $T$ & $F$ & $T$ & $T$ & $T$ & $F$ \\
+      $F$ & $T$ & $T$ & $T$ & $F$ & $F$ \\
+    \end{tabular}
+    \end{center}
+    So the French, the Swiss and the American recipes use semisweet chocolate.
+
+    Second, consider the flour. Let $P_2$, $Q_2$, $R_2$, $S_2$ represent the French, the Swiss, the German and the American recipes use very little flour respectively, and exactly three of them are true as well. These statements should be true: $R_2 \leftrightarrow S_2$, $\neg (P_2 \leftrightarrow S_2)$. Construct the truth table:
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c|c}
+      $\mathbf{P_2}$ & $\mathbf{Q_2}$ & $\mathbf{R_2}$ & $\mathbf{S_2}$ & $\mathbf{R_2} \leftrightarrow \mathbf{S_2}$ & $\neg (\mathbf{P_2} \leftrightarrow \mathbf{S_2})$ \\
+      \hline
+      $T$ & $T$ & $T$ & $F$ & $F$ & $F$ \\
+      $T$ & $T$ & $F$ & $T$ & $F$ & $T$ \\
+      $T$ & $F$ & $T$ & $T$ & $T$ & $T$ \\
+      $F$ & $T$ & $T$ & $T$ & $T$ & $F$ \\
+    \end{tabular}
+    \end{center}
+    So the French, the German and the American recipes use very little flour.
+
+    Third, consider the sugar. Let $P_3$, $Q_3$, $R_3$, $S_3$ represent the French, the Swiss, the German and the American recipes use less than 1/4 cup sugar, and still exactly three of them are true. The statement should be true: $\neg(R_3 \wedge S_3)$. Construct the truth table:
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c}
+      $\mathbf{P_3}$ & $\mathbf{Q_3}$ & $\mathbf{R_3}$ & $\mathbf{S_3}$ & $\neg (\mathbf{R_3} \wedge \mathbf{S_3})$ \\
+      \hline
+      $T$ & $T$ & $T$ & $F$ & $T$ \\
+      $T$ & $T$ & $F$ & $T$ & $T$ \\
+      $T$ & $F$ & $T$ & $T$ & $F$ \\
+      $F$ & $T$ & $T$ & $T$ & $F$ \\
+    \end{tabular}
+    \end{center}
+    So the French and the Swiss recipes use less than 1/4 cup sugar. Since each of the four has at least two of the qualities, we can determine that the American recipe also uses less than 1/4 cup sugar.
+
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|c|}
+          \hline
+           & French & Swiss & German & American \\ \hline
+          use semisweet chocolate & $\surd$ & $\surd$ & $\times$ & $\surd$ \\ \hline
+          use very little flour & $\surd$ & $\times$ & $\surd$ & $\surd$ \\ \hline
+          use less than 1/4 cup sugar & $\surd$ & $\surd$ & $\surd$ & $\times$ \\ \hline
+        \end{tabular}
+    \end{center}
+
+    So, Karl's favorite recipe is the \textbf{French} one.
+
+    \section{[UD] Problem 3.10}
+    Proof: The contrapositive of the statement is: if $n$ is even, then $3n$ is even. \par
+    If $n$ is even, then there exists an integer $k$ s.t. $n=2k$. Therefore, $3n=3(2k)=2(3k)$ where $3k$ is an integer, so $3n$ is even. $\square$
+
+    \section{[UD] Problem 3.11}
+    Proof: Suppose $\sqrt{2x}=k$ is an integer, then $2x=k^2$ is  even. \par
+    The contrapositive of ``if $k^2$ is even, then $k$ is even'' is ``if $k$ is odd, then $k^2$ is odd''. Let $k=2m+1$ where $m$ is an integer, then $k^2=4m^2+4m+1=2(2m^2+2m)+1$ is an odd. So the statement is true. \par
+    We have proved that $k$ is even, i.e. there exists an integer $n$ s.t. $k=2n$. So $k^2=4n^2=2x$, i.e. $x=2n^2$ is even, but by assuption $x$ is odd, which leads to a contradiction. So $\sqrt{2x}$ is not an integer.  $\square$
+
+    \section{[UD] Problem 4.1}
+    \begin{enumerate}[(a)]
+      \item $\forall x, \exists y, x=2y$.
+      \item $\forall y, \exists x, x=2y$.
+      \item $\forall x, \forall y, x=2y$.
+      \item $\exists x, \exists y, x=2y$.
+      \item $\exists x, \exists y, x=2y$.
+    \end{enumerate}
+
+    \section{[UD] Problem 4.5}
+    The universe is $\mathbb{R}$ throughout.
+    \begin{enumerate}[(a)]
+      \item There exists $x \in \mathbb{R}$ such that $x^2 \leq 0$.
+      \item There exists an odd integer which is zero.
+      \item I am hungry and I don't eat chocolate.
+      \item There is a girl who likes every boy.
+      \item For all $x$ the inequality $g(x) \leq 0$ holds.
+      \item There exits $x$, for all $y$ we have $xy \neq 1$.
+      \item For all $y$, there exists $x$ such that $xy \neq 0$.
+      \item There exists $x$ such that $x \neq 0$ and for all $y$ the inequality $xy \neq 1$ holds.
+      \item There exists $x$ such that $x > 0$ and there exists $y$ such that $xy^2<0$.
+      \item There exists $\epsilon > 0$, for all $\delta > 0$, $|x-1| < \delta $ and $|x^2-1|\geq \epsilon$ hold.
+      \item There exists a real number $M$, for every real number $N$, there exists $n>N$ such that $|f(n)| \leq M$.
+    \end{enumerate}
+
+    \section{[UD] Problem 4.7}
+    \begin{enumerate}[(a)]
+      \item The negation of the statement is
+        \begin{align*}
+          & \neg(\forall x,((x \in \mathbb{Z} \wedge \neg (\exists y,(y \in \mathbb{Z} \wedge x=7y))) \rightarrow (\exists z,(z \in \mathbb{Z} \wedge x=2z)))) \\
+          = & \exists x, ((x \in \mathbb{Z} \wedge \neg (\exists y,(y \in \mathbb{Z} \wedge x=7y))) \wedge \neg (\exists z,(z \in \mathbb{Z} \wedge x=2z))) \\
+          = & \exists x, ((x \in \mathbb{Z} \wedge \forall y,\neg (y \in \mathbb{Z} \wedge x=7y)) \wedge \forall z,\neg (z \in \mathbb{Z} \wedge x=2z)) \\
+          = & \exists x, ((x \in \mathbb{Z} \wedge \forall y, (y \notin \mathbb{Z} \vee x \neq 7y)) \wedge \forall z, (z \notin \mathbb{Z} \vee x \neq 2z))
+        \end{align*}
+      \item For all $x$, if $x$ is an integer and there does not exist $y$ such that $y$ is an integer and $x=7y$, then there exists $z$ such that $z$ is an integer and $x=2z$.
+      \item The negation is true. Consider the original one, we have a counterexample: let $x=5$, $x$ is an integer and $x$ is not a multiple of $7$. However, $x$ is not a multiple of $2$ as well, which is contradictory to the original statement. So the negation is true.
+    \end{enumerate}
+
+    \section{[UD] Problem 4.9}
+      This joke reflects the fact that physicists and chemists, especially chemists, tend to use a lot of inductions, rather than mathematicians, who use deductive reasoning in their work. Logically speaking, a statement concluded by (incomplete) inductive reasoning is not always true, for you can't prove that there doesn't exist a counterexample, no matter how obvious the statement is. In this joke, we can't say in logic that all the cows in Switzerland are brown until we see every single cow in Switzerland, and we can't say in logic that the cow we've seen is brown until we see the other side of the cow.
+
+    \section{[UD] Problem 4.13}
+    \begin{enumerate}[(a)]
+      \item Yes. ``If don't love Sam, then I don't love Bill'' is the contrapositive of ``If I love Bill, then I love Sam''. They are logically equivalent, and the former one is true, so the latter one is also true.
+      \item No. A logical implication is false if and only if its antecedent is true and its conclusion is false. In this case, antecedent is ``Susie goes to the ball in the red dress'' which is false, and the conclusion is ``I will stay home'', which could be either true or false according to the implication.
+      \item Yes. The contrapositive of (1) is if for all real number $m$, $m \leq l$, then $l$ is not a positive real number. We can conclude from (2) that the antecedent is true when $l=t$, so the conclusion is also true, i.e. $t$ is not positive.
+      \item Yes. Let $P$ represent ``every little breeze seems to whisper Louise'' and $Q$ represent ``my name is Igor''. The statement $P \vee Q$ is true and $Q$ is false, so $P$ must be true.
+      \item No. Statement (2) is equivalent to ``every house on my street is not blue'', which means the antecedent of statement (1) is false, so statement (3) can be either true or false.
+      \item Yes. The contrapositive of (1) is ``if $y \geq 1/5$, then $x \leq 5$'', and the antecedent is true, so the conclusion, $x \leq 5$ is also true.
+      \item No. When the antecedent is false, the conclusion can be either true or false.
+      \item Yes. The contrapositive of (1) is ``if $y \leq z$, then $y \leq x$ or $y \leq 0$, and the antecedent is true, so the conclusion is also true.
+    \end{enumerate}
+\end{document}
