@@ -1,0 +1,192 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{ctex}
+\usepackage{enumerate}
+\usepackage{times}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\begin{document}
+  \title{论题~1-4~作业}
+  \author{姓名：陈劭源 \and 学号：161240004}
+  \date{}
+  \maketitle
+
+  \section{[DH] Problem 2.1}
+  循环体包含两项操作：将当前指针指向的职员工资加入到总工资中；将当前指针指向下一个职员。在处理最后一个职员时，因为该职员已是最后一个，所以“将当前指针指向下一个职员”的操作是未定义的，所以应当单独处理。
+
+  \section{[DH] Problem 2.2}
+  \begin{enumerate}[(a)]
+  \item 冒泡排序完成第~$k$~次循环时，可以保证第~$k$~大元素处在正确的位置上。进行~$N-1$~次循环后，前~$N-1$~大数已经处在了正确的位置上，第~$N$~大数则只可能处在最后一个位置上，这恰好也是正确的位置。因此冒泡排序只要进行~$N-1$~次外层循环即可。
+  \item
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    (1) \> $I \leftarrow 0$;\\
+    (2) \> do the following $N$ times: \\
+     \> (2.1) \> point to the first element; \\
+     \> (2.2) \> do the following $N-I$ times: \\
+     \>  \> (2.2.1) \> compare the element pointed to with the next element; \\
+     \>  \> (2.2.2) \> if the compared elements are in the wrong order, exchange them; \\
+     \>  \> (2.2.3) \> point to the next element;\\
+     \>  (2.3) \> $I \leftarrow I+1$.
+  \end{tabbing}
+
+  \end{enumerate}
+
+  \section{[DH] Problem 2.3}
+    （流程图见下页）
+    \begin{figure}[p]
+      \centering
+      \subfigure[unimproved]{
+        \includegraphics[width=8cm]{figures/fig4_a.png}}
+      \hspace{1in}
+      \subfigure[improved]{
+        \includegraphics[width=8cm]{figures/fig4_b.png}}
+      \caption*{Figure 4: flowchart for bubblesort}
+    \end{figure}
+    
+  \newpage
+
+  \section{[DH] Problem 2.4}
+  \begin{enumerate}[(a)]
+  \item
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    (1) \> $S \leftarrow 0$;\\
+    (2) \> $P \leftarrow 1$;\\
+    (3) \> point to the first element of $L$\\
+    (4) \> do the following $N-1$ times: \\
+     \> (4.1) \> add the integer pointed to to $S$; \\
+     \> (4.2) \> if the number pointed to is odd, then \\
+     \>  \> (4.2.1) \> multiply $P$ by the number pointed to;\\
+     \> (4.3) \> point to the next element of $L$;\\
+    (5) \> add the integer pointed to to $S$; \\
+    (6) \> if the number pointed to is odd, then \\
+    \> (6.1) \> multiply $P$ by the number pointed to.
+  \end{tabbing}
+  \item
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    (1) \> $S \leftarrow 0$;\\
+    (2) \> $P \leftarrow 1$;\\
+    (3) \> point to the first element of $L$\\
+    (4) \> add the integer pointed to to $S$; \\
+    (5) \> if the number pointed to is odd, then \\
+     \> (5.1) \> multiply $P$ by the number pointed to;\\
+    (6) \> if last element is pointed to, goto (9); \\
+    (7) \> point to the next element of $L$; \\
+    (8) \> goto (4);\\
+    (9) \> end.
+  \end{tabbing}
+  \end{enumerate}
+  
+  \section{[DH] Problem 2.5}
+  \begin{enumerate}[(a)]
+  \item
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    (1) \> $I \leftarrow 0$;\\
+    (2) \> while $I < N$ do the following;\\
+     \> (2.1) \> $\cdots\cdots$; \\
+     \> (2.2) \> $I \leftarrow I+1$. 
+  \end{tabbing}
+  \item
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    (1) \> $t \leftarrow $ false; \\
+    (2) \> while $A$ is true and $t$ is false do the following;\\
+     \> (2.1) \> $\cdots\cdots$; \\
+     \> (2.2) \> $t \leftarrow $ true;\\
+    (3) \> while $A$ is false and $t$ is false do the following;\\
+     \> (3.1) \> $\cdots\cdots$; \\
+     \> (3.2) \> $t \leftarrow $ true.
+  \end{tabbing}
+  \item
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    (1) \> if $A$ is true then do the following: \\
+     \> (1.1) \> $\cdots\cdots$; \\
+     \> (1.2) \> goto (1).\\
+  \end{tabbing}
+  \item 
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    (1) \> if $A$ is true then do the following: \\
+     \> (1.1) \> repeat the following: \\
+     \> \> (1.1.1) \> $\cdots\cdots$;\\
+     \> (1.1) \> until $A$ is false. \\
+  \end{tabbing}
+  \end{enumerate}
+  
+  \section{[DH] Problem 2.6}
+    move $A$ to $C$;\par
+    move $A$ to $B$;\par
+    move $C$ to $B$;\par
+    move $A$ to $C$;\par
+    move $B$ to $A$;\par
+    move $B$ to $C$;\par
+    move $A$ to $C$;\par
+    move $A$ to $B$;\par
+    move $C$ to $B$;\par
+    move $C$ to $A$;\par
+    move $B$ to $A$;\par
+    move $C$ to $B$;\par
+    move $A$ to $C$;\par
+    move $B$ to $A$;\par
+    move $C$ to $B$;\par
+    move $A$ to $C$;\par
+    move $B$ to $A$;\par
+    move $B$ to $C$;\par
+    move $A$ to $C$;\par
+    move $B$ to $A$;\par
+    move $C$ to $B$;\par
+    move $C$ to $A$;\par
+    move $B$ to $A$;\par
+    move $B$ to $C$;\par
+    move $A$ to $C$;\par
+    move $A$ to $B$;\par
+    move $C$ to $B$;\par
+    move $A$ to $C$;\par
+    move $B$ to $A$;\par
+    move $B$ to $C$;\par
+    move $A$ to $C$.
+
+  \section{[DH] Problem 2.7}
+  \begin{enumerate}[(a)]
+  \item
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    (1) \> $I \leftarrow 1$;\\
+    (2) \> $P \leftarrow 1$;\\
+    (3) \> while $I \leq N$ do the following: \\
+     \> (3.1) $P \leftarrow P \times I$;\\
+     \> (3.2) $I \leftarrow I + 1 $;\\
+    (4) \> output $P$.
+  \end{tabbing}
+  \item
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    function \textbf{factorial of } $i$;\\
+    (1) \> if $i=0$ then return $1$;\\
+    (2) \> return $i \times $ \textbf{factorial of} $i-1$.\\
+     \\
+    (1) \> output \textbf{factorial of} $N$.
+  \end{tabbing}
+  \end{enumerate}
+  
+  \section{[DH] Problem 2.8}
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    subroutine \textbf{while-do};\\
+    (1) \> if $A$ is true then return;\\
+    (2) \> $\cdots\cdots$;\\
+    (3) \> call \textbf{while-do}.
+
+  \end{tabbing}
+
+\end{document}
