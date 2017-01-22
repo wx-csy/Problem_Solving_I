@@ -191,26 +191,28 @@ Language: C++\\
 \hlstd{}\hspace*{\fill}\\
 \hlstd{}\hlkwb{int\ }\hlstd{}\hlkwd{main}\hlstd{}\hlopt{()}\hspace*{\fill}\\
 \hlstd{}\hlopt{\usebox{\hlboxopenbrace}}\hspace*{\fill}\\
-\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwb{int\ }\hlstd{ans\ }\hlopt{=\ }\hlstd{}\hlnum{0}\hlstd{}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwb{int\ }\hlstd{ans}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwb{int\ }\hlstd{temp}\hlopt{;}\hspace*{\fill}\\
 \hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwa{while\ }\hlstd{}\hlopt{(}\hlstd{cin\ }\hlopt{\usebox{\hlboxgreaterthan}\usebox{\hlboxgreaterthan}\ }\hlstd{arr}\hlopt{{[}}\hlstd{n}\hlopt{{]})\ }\hlstd{n}\hlopt{++;}\hspace*{\fill}\\
 \hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwa{for\ }\hlstd{}\hlopt{(}\hlstd{}\hlkwb{int\ }\hlstd{i\ }\hlopt{=\ }\hlstd{}\hlnum{0}\hlstd{}\hlopt{;\ }\hlstd{i\ }\hlopt{\usebox{\hlboxlessthan}\ }\hlstd{n}\hlopt{;\ }\hlstd{i}\hlopt{++)}\hspace*{\fill}\\
 \hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlopt{\usebox{\hlboxopenbrace}}\hspace*{\fill}\\
-\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlkwa{while\ }\hlstd{}\hlopt{(}\hlstd{top\ }\hlopt{!=\ }\hlstd{}\hlnum{0\ }\hlstd{}\hlopt{\&\&\ }\hlstd{s}\hlopt{{[}}\hlstd{top\ }\hlopt{{-}\ }\hlstd{}\hlnum{1}\hlstd{}\hlopt{{]}\ \usebox{\hlboxgreaterthan}\ }\hlstd{arr}\hlopt{{[}}\hlstd{i}\hlopt{{]})\ }\hlstd{top}\hlopt{{-}{-};}\hspace*{\fill}\\
-\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{s}\hlopt{{[}}\hlstd{top}\hlopt{{]}\ =\ }\hlstd{arr}\hlopt{{[}}\hlstd{i}\hlopt{{]};}\hspace*{\fill}\\
-\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{top}\hlopt{++;}\hspace*{\fill}\\
-\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{ans\ }\hlopt{=\ }\hlstd{}\hlkwd{max}\hlstd{}\hlopt{(}\hlstd{ans}\hlopt{,\ }\hlstd{top}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{temp\ }\hlopt{=\ }\hlstd{}\hlkwd{upper\textunderscore bound}\hlstd{}\hlopt{(}\hlstd{s}\hlopt{,\ }\hlstd{s\ }\hlopt{+\ }\hlstd{top}\hlopt{,\ }\hlstd{arr}\hlopt{{[}}\hlstd{i}\hlopt{{]})\ {-}\ }\hlstd{s}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{s}\hlopt{{[}}\hlstd{temp}\hlopt{{]}\ =\ }\hlstd{arr}\hlopt{{[}}\hlstd{i}\hlopt{{]};}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{top\ }\hlopt{=\ }\hlstd{}\hlkwd{max}\hlstd{}\hlopt{(}\hlstd{temp\ }\hlopt{+\ }\hlstd{}\hlnum{1}\hlstd{}\hlopt{,\ }\hlstd{top}\hlopt{);}\hspace*{\fill}\\
 \hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlopt{\usebox{\hlboxclosebrace}}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{ans\ }\hlopt{=\ }\hlstd{top}\hlopt{;}\hspace*{\fill}\\
 \hlstd{}\hlstd{\ \ \ \ }\hlstd{top\ }\hlopt{=\ }\hlstd{}\hlnum{0}\hlstd{}\hlopt{;}\hspace*{\fill}\\
 \hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwa{for\ }\hlstd{}\hlopt{(}\hlstd{}\hlkwb{int\ }\hlstd{i\ }\hlopt{=\ }\hlstd{}\hlnum{0}\hlstd{}\hlopt{;\ }\hlstd{i\ }\hlopt{\usebox{\hlboxlessthan}\ }\hlstd{n}\hlopt{;\ }\hlstd{i}\hlopt{++)}\hspace*{\fill}\\
 \hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlopt{\usebox{\hlboxopenbrace}}\hspace*{\fill}\\
-\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{}\hlkwa{while\ }\hlstd{}\hlopt{(}\hlstd{top\ }\hlopt{!=\ }\hlstd{}\hlnum{0\ }\hlstd{}\hlopt{\&\&\ }\hlstd{s}\hlopt{{[}}\hlstd{top\ }\hlopt{{-}\ }\hlstd{}\hlnum{1}\hlstd{}\hlopt{{]}\ \usebox{\hlboxlessthan}\ }\hlstd{arr}\hlopt{{[}}\hlstd{i}\hlopt{{]})\ }\hlstd{top}\hlopt{{-}{-};}\hspace*{\fill}\\
-\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{s}\hlopt{{[}}\hlstd{top}\hlopt{{]}\ =\ }\hlstd{arr}\hlopt{{[}}\hlstd{i}\hlopt{{]};}\hspace*{\fill}\\
-\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{top}\hlopt{++;}\hspace*{\fill}\\
-\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{ans\ }\hlopt{=\ }\hlstd{}\hlkwd{max}\hlstd{}\hlopt{(}\hlstd{ans}\hlopt{,\ }\hlstd{top}\hlopt{);}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{arr}\hlopt{{[}}\hlstd{i}\hlopt{{]}\ =\ {-}}\hlstd{arr}\hlopt{{[}}\hlstd{i}\hlopt{{]};}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{temp\ }\hlopt{=\ }\hlstd{}\hlkwd{upper\textunderscore bound}\hlstd{}\hlopt{(}\hlstd{s}\hlopt{,\ }\hlstd{s\ }\hlopt{+\ }\hlstd{top}\hlopt{,\ }\hlstd{arr}\hlopt{{[}}\hlstd{i}\hlopt{{]})\ {-}\ }\hlstd{s}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{s}\hlopt{{[}}\hlstd{temp}\hlopt{{]}\ =\ }\hlstd{arr}\hlopt{{[}}\hlstd{i}\hlopt{{]};}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ \ \ \ \ }\hlstd{top\ }\hlopt{=\ }\hlstd{}\hlkwd{max}\hlstd{}\hlopt{(}\hlstd{temp\ }\hlopt{+\ }\hlstd{}\hlnum{1}\hlstd{}\hlopt{,\ }\hlstd{top}\hlopt{);}\hspace*{\fill}\\
 \hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlopt{\usebox{\hlboxclosebrace}}\hspace*{\fill}\\
-\hlstd{}\hlstd{\ \ \ \ }\hlstd{cout\ }\hlopt{\usebox{\hlboxlessthan}\usebox{\hlboxlessthan}\ }\hlstd{ans\ }\hlopt{\usebox{\hlboxlessthan}\usebox{\hlboxlessthan}\ }\hlstd{endl}\hlopt{;}\hspace*{\fill}\\
+\hlstd{}\hlstd{\ \ \ \ }\hlstd{cout\ }\hlopt{\usebox{\hlboxlessthan}\usebox{\hlboxlessthan}\ }\hlstd{}\hlkwd{max}\hlstd{}\hlopt{(}\hlstd{ans}\hlopt{,\ }\hlstd{top}\hlopt{)\ \usebox{\hlboxlessthan}\usebox{\hlboxlessthan}\ }\hlstd{endl}\hlopt{;}\hspace*{\fill}\\
 \hlstd{}\hlstd{\ \ \ \ }\hlstd{}\hlkwa{return\ }\hlstd{}\hlnum{0}\hlstd{}\hlopt{;}\hspace*{\fill}\\
 \hlstd{}\hlopt{\usebox{\hlboxclosebrace}}\hlstd{}\hspace*{\fill}\\
+\mbox{}
 }
 \normalfont
 \normalsize

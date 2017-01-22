@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{ctex}
+\usepackage{enumerate}
+\usepackage{times}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\begin{document}
+  \title{论题~1-5~作业}
+  \author{姓名：陈劭源 \and 学号：161240004}
+  \date{}
+  \maketitle
+
+  \section{[DH] Problem 2.10}
+  Let $T$ be a vector of Booleans.
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    (1) \> for $I$ going from 1 to $N$ do the following:\\
+     \> (1.1) \> $T[I] \leftarrow$ false; \\
+    (2) \> for $I$ going from 1 to $N$ do the following:\\
+     \> (2.1) \> if $P[I] < 1$ or $P[I] > N$ do the following: \\
+     \>  \> (2.2.1) \> output 'NO'; \\
+     \>  \> (2.2.2) \> end; \\
+     \> (2.2) \> $T[P[I]] = $ true; \\
+    (3) \> for $I$ going from 1 to $N$ do the following: \\
+     \> (3.1) if $T[I] = $ false do the following: \\
+     \> \> (3.1.1) \> output 'NO'; \\
+     \> \> (3.1.2) \> end; \\
+    (4) \> output 'YES'.
+  \end{tabbing}
+
+  \section{[DH] Problem 2.11}
+  Let $K$ be a vector of Booleans, $L$ be a vector of integers which stores a permutation.
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    subroutine \textbf{produce permutation} $I$ \\
+    (1) \> if $I = N$ do the following:\\
+     \> (1.1) \> output $R$; \\
+     \> (1.2) \> return; \\
+    (2) \> for $i$ going from 1 to $N$ do the following:\\
+     \> (2.1) \> if $K[i]$ is false do the following: \\
+     \> \> (2.2.1) \> $R[I] \leftarrow i$ \\
+     \> \> (2.2.2) \> $K[i] \leftarrow$ true; \\
+     \> \> (2.2.3) \> call \textbf{produce permutation} $I + 1$ \\
+     \> \> (2.2.4) \> $K[i] \leftarrow$ false; \\
+    \\
+    (1) \> $i$ going from 1 to $N$ do the following:\\
+     \> (1.1) \> $K[i] \leftarrow$ false; \\
+    (2) \> call \textbf{produce permutation} $0$.
+  \end{tabbing}
+
+  \section{[DH] Problem 2.12}
+  \begin{enumerate}[(a)]
+  \item
+    \begin{enumerate}[i.]
+     \item \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$)
+     \item \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{print}($X$),\quad
+         \textbf{read}($X$),\quad \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$)
+     \item \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{print}($X$),\quad
+         \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad
+         \textbf{read}($X$),\quad \textbf{print}($X$),\quad
+         \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad
+         \textbf{read}($X$),\quad \textbf{print}($X$),\quad
+         \textbf{pop}($X,S$),\quad \textbf{print}($X$),\quad
+         \textbf{read}($X$),\quad \textbf{print}($X$),\quad
+         \textbf{pop}($X,S$),\quad \textbf{print}($X$),\quad
+         \textbf{read}($X$),\quad \textbf{print}($X$),\quad
+         \textbf{pop}($X,S$),\quad \textbf{print}($X$),\quad
+         \textbf{read}($X$),\quad \textbf{print}($X$),\quad
+         \textbf{pop}($X,S$),\quad \textbf{print}($X$)
+    \end{enumerate}
+  \item
+    \begin{enumerate}[i.]
+     \item 要生成~(3, 1, 2)~这个排列，由于~3~是最先输出的，1, 2~依次在栈中，此时若要继续输出，必然是以~2,1~的形式输出，所以不可能用栈生成~(3, 1, 2)~这个排列。 \hfill $\square$
+     \item 要生成~(4, 5, 3, 7, 2, 1, 6)~这个排列，当输出~7~时，栈中剩余的元素依次为~1, 2, 6~，下一个需要输出~2~，但输出~2~之前~6~必须输出，从而不可能用栈生成~(4, 5, 3, 7, 2, 1, 6)~这个排列。 \hfill $\square$
+    \end{enumerate}
+  \item 容易验证，以下排列可以用栈生成：\par 
+        (1, 2, 3, 4) \quad (1, 2, 4, 3) \quad (1, 3, 2, 4) \quad (1, 3, 4, 2) \quad (1, 4, 3, 2) \quad (2, 1, 3, 4) \quad (2, 1, 4, 3) \\
+        (2, 3, 1, 4) \quad (2, 3, 4, 1) \quad (2, 4, 3, 1) \quad (3, 2, 1, 4) \quad (3, 2, 4, 1) \quad (3, 4, 2, 1) \quad (4, 3, 2, 1) \par
+       以下排列不能用栈生成：\par 
+        (1, 4, 2, 3) \quad (2, 4, 1, 3) \quad (3, 1, 2, 4) \quad (3, 1, 4, 2) \quad (3, 4, 1, 2) \quad (4, 1, 2, 3) \quad (4, 1, 3, 2) \\
+        (4, 2, 3, 1) \quad (4, 2, 1, 3) \quad (4, 3, 1, 2) \par
+        所以共有~10~个排列不能用栈生成。
+  \end{enumerate}
+
+  \section{[DH] Problem 2.13}
+
+  \section{[DH] Problem 2.14}
+
+  \section{[DH] Problem 2.15}
+
+  \section{[DH] Problem 2.16}
+
+
+\end{document}

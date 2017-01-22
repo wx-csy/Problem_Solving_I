@@ -9,23 +9,24 @@ int top = 0;
 
 int main()
 {
-    int ans = 0;
+    int ans;
+    int temp;
     while (cin >> arr[n]) n++;
     for (int i = 0; i < n; i++)
     {
-        while (top != 0 && s[top - 1] > arr[i]) top--;
-        s[top] = arr[i];
-        top++;
-        ans = max(ans, top);
+        temp = upper_bound(s, s + top, arr[i]) - s;
+        s[temp] = arr[i];
+        top = max(temp + 1, top);
     }
+    ans = top;
     top = 0;
     for (int i = 0; i < n; i++)
     {
-        while (top != 0 && s[top - 1] < arr[i]) top--;
-        s[top] = arr[i];
-        top++;
-        ans = max(ans, top);
+        arr[i] = -arr[i];
+        temp = upper_bound(s, s + top, arr[i]) - s;
+        s[temp] = arr[i];
+        top = max(temp + 1, top);
     }
-    cout << ans << endl;
+    cout << max(ans, top) << endl;
     return 0;
 }
