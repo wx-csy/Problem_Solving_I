@@ -45,10 +45,10 @@
      \> (1.2) \> return; \\
     (2) \> for $i$ going from 1 to $N$ do the following:\\
      \> (2.1) \> if $K[i]$ is false do the following: \\
-     \> \> (2.2.1) \> $R[I] \leftarrow i$ \\
-     \> \> (2.2.2) \> $K[i] \leftarrow$ true; \\
-     \> \> (2.2.3) \> call \textbf{produce permutation} $I + 1$ \\
-     \> \> (2.2.4) \> $K[i] \leftarrow$ false; \\
+     \> \> (2.1.1) \> $R[I] \leftarrow i$ \\
+     \> \> (2.1.2) \> $K[i] \leftarrow$ true; \\
+     \> \> (2.1.3) \> call \textbf{produce permutation} $I + 1$ \\
+     \> \> (2.1.4) \> $K[i] \leftarrow$ false. \\
     \\
     (1) \> $i$ going from 1 to $N$ do the following:\\
      \> (1.1) \> $K[i] \leftarrow$ false; \\
@@ -59,43 +59,157 @@
   \begin{enumerate}[(a)]
   \item
     \begin{enumerate}[i.]
-     \item \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$)
+     \item \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{print}($X$),\quad \textbf{pop}($X,S$),\\ \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$)
      \item \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{print}($X$),\quad
-         \textbf{read}($X$),\quad \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$)
+         \textbf{read}($X$),\\ \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$)
      \item \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{print}($X$),\quad
-         \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad
+         \textbf{read}($X$),\\ \textbf{push}($X,S$),\quad
          \textbf{read}($X$),\quad \textbf{print}($X$),\quad
          \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad
-         \textbf{read}($X$),\quad \textbf{print}($X$),\quad
+         \textbf{read}($X$),\quad \textbf{print}($X$),\\
          \textbf{pop}($X,S$),\quad \textbf{print}($X$),\quad
          \textbf{read}($X$),\quad \textbf{print}($X$),\quad
          \textbf{pop}($X,S$),\quad \textbf{print}($X$),\quad
-         \textbf{read}($X$),\quad \textbf{print}($X$),\quad
+         \textbf{read}($X$),\\ \textbf{print}($X$),\quad
          \textbf{pop}($X,S$),\quad \textbf{print}($X$),\quad
          \textbf{read}($X$),\quad \textbf{print}($X$),\quad
          \textbf{pop}($X,S$),\quad \textbf{print}($X$)
     \end{enumerate}
   \item
     \begin{enumerate}[i.]
-     \item 要生成~(3, 1, 2)~这个排列，由于~3~是最先输出的，1, 2~依次在栈中，此时若要继续输出，必然是以~2,1~的形式输出，所以不可能用栈生成~(3, 1, 2)~这个排列。 \hfill $\square$
+     \item 要生成~(3, 1, 2)~这个排列，由于~3~是最先输出的，1, 2~ 依次在栈中，此时若要继续输出，必然是以~2,1~的形式输出，所以不可能用栈生成~(3, 1, 2)~这个排列。 \hfill $\square$
      \item 要生成~(4, 5, 3, 7, 2, 1, 6)~这个排列，当输出~7~时，栈中剩余的元素依次为~1, 2, 6~，下一个需要输出~2~，但输出~2~之前~6~必须输出，从而不可能用栈生成~(4, 5, 3, 7, 2, 1, 6)~这个排列。 \hfill $\square$
     \end{enumerate}
-  \item 容易验证，以下排列可以用栈生成：\par 
+  \item 容易验证，以下排列可以用栈生成：\par
         (1, 2, 3, 4) \quad (1, 2, 4, 3) \quad (1, 3, 2, 4) \quad (1, 3, 4, 2) \quad (1, 4, 3, 2) \quad (2, 1, 3, 4) \quad (2, 1, 4, 3) \\
         (2, 3, 1, 4) \quad (2, 3, 4, 1) \quad (2, 4, 3, 1) \quad (3, 2, 1, 4) \quad (3, 2, 4, 1) \quad (3, 4, 2, 1) \quad (4, 3, 2, 1) \par
-       以下排列不能用栈生成：\par 
+       以下排列不能用栈生成：\par
         (1, 4, 2, 3) \quad (2, 4, 1, 3) \quad (3, 1, 2, 4) \quad (3, 1, 4, 2) \quad (3, 4, 1, 2) \quad (4, 1, 2, 3) \quad (4, 1, 3, 2) \\
         (4, 2, 3, 1) \quad (4, 2, 1, 3) \quad (4, 3, 1, 2) \par
         所以共有~10~个排列不能用栈生成。
   \end{enumerate}
 
   \section{[DH] Problem 2.13}
-
+  Let $S$ be an empty stack. Assume that the length of the permutation is $N$.
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \= (1.1.1.1) \=  \kill
+    function \textbf{test} \\
+    (1) \> $I \leftarrow 1$; \\
+    (2) \> for $i$ going from 1 to $N$ do the following:\\
+     \> (2.1) \> \textbf{read}($X$); \\
+     \> (2.2) \> if $I \leq X$ do the following: \\
+     \> \> (2.2.1) \> for $j$ going from $I$ to $X$ do the following: \\
+     \> \> \> (2.2.1.1) \> \textbf{push}($j,S$); \\
+     \> \> (2.2.2) \> \textbf{pop}($X,S$); \\
+     \> \> (2.2.3) \> $I \leftarrow X + 1$; \\
+     \> (2.3) \> otherwise do the following: \\
+     \> \> (2.3.1) \> \textbf{pop}($Y,S$); \\
+     \> \> (2.3.2) \> if $X \neq Y$ then return false; \\
+    (3) \> return true. \\
+    \\
+    subroutine \textbf{print operations} \\
+    (1) \> $I \leftarrow 1$; \\
+    (2) \> for $i$ going from 1 to $N$ do the following:\\
+     \> (2.1) \> \textbf{read}($X$); \\
+     \> (2.2) \> if $I \leq X$ do the following: \\
+     \> \> (2.2.1) \> for $j$ going from $I$ to $X$ do the following: \\
+     \> \> \> (2.2.1.1) \> \textbf{print}("\textbf{read}($X$)"); \\
+     \> \> \> (2.2.1.2) \> \textbf{print}("\textbf{push}($X,S$)"); \\
+     \> \> \> (2.2.1.3) \> \textbf{push}($j,S$); \\
+     \> \> (2.2.2) \> \textbf{print}("\textbf{pop}($X,S$)"); \\
+     \> \> (2.2.3) \> \textbf{print}("\textbf{print}($X$)"); \\
+     \> \> (2.2.4) \> \textbf{pop}($X,S$); \\
+     \> \> (2.2.5) \> $I \leftarrow X + 1$; \\
+     \> (2.3) \> otherwise do the following: \\
+     \> \> (2.3.1) \> \textbf{pop}($Y,S$); \\
+     \> \> (2.3.2) \> \textbf{print}("\textbf{pop}($X,S$)"); \\
+     \> \> (2.3.3) \> \textbf{print}("\textbf{print}($X$)"). \\
+    \\
+    (1) \> if \textbf{test} is true then do the following: \\
+     \> (1.1) \> \textbf{print}("Yes"); \\
+     \> (1.2) \> call \textbf{print operations}; \\
+    (2) \> otherwise do the following: \\
+     \> (2.1) \> \textbf{print}("No").
+  \end{tabbing}
   \section{[DH] Problem 2.14}
+  \begin{enumerate}[(a)]
+  \item
+    \begin{enumerate}[i.]
+     \item Obtain by a queue: \quad \textbf{read}($X$),\quad \textbf{add}($X,Q$),\quad \textbf{read}($X$),\quad \textbf{add}($X,Q$), \quad \textbf{read}($X$),\\ \textbf{print}($X$),\quad \textbf{remove}($X,Q$), \quad \textbf{print}($X$), \quad \textbf{remove}($X,Q$), \quad \textbf{print}($X$) \par
+           Obtain by two stacks: \quad \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{push}($X,S'$),\quad \textbf{read}($X$), \\ \textbf{print}($X$), \quad \textbf{pop}($X,S$), \quad \textbf{print}($X$),\quad \textbf{pop}($X,S'$), \quad \textbf{print}($X$)
+     \item Obtain by a queue: \quad \textbf{read}($X$),\quad \textbf{add}($X,Q$),\quad \textbf{read}($X$),\quad \textbf{add}($X,Q$),\quad \textbf{read}($X$), \\ \textbf{add}($X,Q$),\quad \textbf{read}($X$), \quad \textbf{print}($X$),\quad \textbf{read}($X$),  \quad \textbf{print}($X$), \quad \textbf{remove}($X,Q$),\quad \textbf{add}($X,Q$),\\ \textbf{remove}($X,Q$),\quad \textbf{add}($X,Q$),\quad \textbf{remove}($X,Q$),\quad \textbf{print}($X$), \quad \textbf{read}($X$), \quad \textbf{add}($X,Q$),\\ \textbf{read}($X$), \quad \textbf{print}($X$),\quad \textbf{remove}($X,Q$),\quad \textbf{add}($X,Q$), \quad \textbf{remove}($X,Q$), \quad \textbf{print}($X$), \\ \textbf{remove}($X,Q$),\quad \textbf{add}($X,Q$), \quad \textbf{remove}($X,Q$), \quad \textbf{print}($X$), \quad \textbf{remove}($X,Q$), \quad \textbf{print}($X$) \par
+         Obtain by two stacks: \quad \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$),\quad \textbf{push}($X,S$),\quad \textbf{read}($X$), \\ \textbf{push}($X,S$),\quad \textbf{read}($X$), \quad \textbf{print}($X$),\quad \textbf{read}($X$),  \quad \textbf{print}($X$), \quad \textbf{pop}($X,S$),\quad \textbf{print}($X$),\\ \quad \textbf{read}($X$),\quad \textbf{push}($X,S'$), \quad \textbf{read}($X$), \quad \textbf{print}($X$),\quad \textbf{pop}($X,S$),\quad \textbf{print}($X$), \quad \textbf{pop}($X,S$),\\ \textbf{print}($X$), \quad \textbf{pop}($X,S'$),\quad \textbf{print}($X$) \par
+    \end{enumerate}
+  \item 用以下方法可只用一个队列生成任一排列：对于某一个要输出的数字，如果不在队列中，则将该数字之前的数字全部入队，然后直接输出该数字；如果在队列中，反复将队首数字出队后再入队“翻找”整个队列，直到找到为止，输出这个数字。对于排列中的每一个数字，依次重复上述操作，即可用一个队列输出任意排列。 \hfill $\square$
+  \item 用以下方法可只用两个队列生成任一排列：对于某一个要输出的数字，如果不在任一栈中，则将该数字之前的数字全部压入任何一个栈，然后直接输出该数字；如果在某个栈中，将该数字之上的数字依次弹出并压入到另一个之中，然后输出这个数字。对于排列中的每一个数字，依次重复上述操作，即可用两个栈输出任意排列。 \hfill $\square$
+  \end{enumerate}
 
   \section{[DH] Problem 2.15}
+  Let $S$, $S'$ be two empty stacks. Assume that the length of the permutation is $N$.
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \= (1.1.1.1) \=  \kill
+    
+    function \textbf{top}($S$) \\
+    (1) \> \textbf{pop}($t,S$);\\
+    (2) \> \textbf{push}($t,S$);\\
+    (3) \> return $t$.\\
+    \\
+    (1) \> $I \leftarrow 1$; \\
+    (2) \> for $i$ going from 1 to $N$ do the following:\\
+     \> (2.1) \> \textbf{read}($X$); \\
+     \> (2.2) \> if $I \leq X$ do the following: \\
+     \> \> (2.2.1) \> for $j$ going from $I$ to $X$ do the following: \\
+     \> \> \> (2.2.1.1) \> \textbf{print}("\textbf{read}($X$)"); \\
+     \> \> \> (2.2.1.2) \> \textbf{print}("\textbf{push}($X,S$)"); \\
+     \> \> \> (2.2.1.3) \> \textbf{push}($j,S$); \\
+     \> \> (2.2.2) \> \textbf{print}("\textbf{pop}($X,S$)"); \\
+     \> \> (2.2.3) \> \textbf{print}("\textbf{print}($X$)"); \\
+     \> \> (2.2.4) \> \textbf{pop}($X,S$); \\
+     \> \> (2.2.5) \> $I \leftarrow X + 1$; \\
+     \> (2.3) \> otherwise do the following: \\
+     \> \> (2.3.1) \> while \textbf{is-empty}($S'$) is false do the following: \\
+     \> \> \> (2.3.1.1) \> \textbf{print}("\textbf{pop}($X,S'$)"); \\
+     \> \> \> (2.3.1.2) \> \textbf{print}("\textbf{push}($X,S$)"); \\
+     \> \> \> (2.3.1.3) \> \textbf{pop}($X,S'$); \\
+     \> \> \> (2.3.1.4) \> \textbf{push}($X,S$); \\
+     \> \> (2.3.2) \> while \textbf{top}($S$) $\neq I$ do the following: \\
+     \> \> \> (2.3.2.1) \> \textbf{print}("\textbf{pop}($X,S$)"); \\
+     \> \> \> (2.3.2.2) \> \textbf{print}("\textbf{push}($X,S'$)"); \\
+     \> \> \> (2.3.2.3) \> \textbf{pop}($X,S$); \\
+     \> \> \> (2.3.2.4) \> \textbf{push}($X,S'$); \\
+     \> \> (2.3.3) \> \textbf{pop}($X,S$); \\
+     \> \> (2.3.4) \> \textbf{print}("\textbf{pop}($X,S$)"); \\
+     \> \> (2.3.5) \> \textbf{print}("\textbf{print}($X$)"). \\
+  \end{tabbing}
 
   \section{[DH] Problem 2.16}
-
+  \begin{enumerate}[(a)]
+  \item Let $T$ be an empty binary search tree, $L$ be a list of integers, $N$ be the number of integers in $L$.
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    subroutine \textbf{add} $X$ \textbf{to} $S$ \\
+    (1) \> if $S$ is empty then do the following: \\
+     \> (1.1) \> $S \leftarrow X$; \\
+     \> (1.2) \> return; \\
+    (2) \> if $X < S$ then do the following: \\
+     \> (2.1) \> \textbf{add} $X$ \textbf{to} \textbf{left}($S$); \\
+    (3) \> otherwise do the following: \\
+     \> (3.1) \> \textbf{add} $X$ \textbf{to} \textbf{right}($S$). \\
+    \\
+    (1) \> for $i$ going from $1$ to $N$ do the following: \\
+     \> (1.1) \> \textbf{add} $L[i]$ \textbf{to} $T$.
+  \end{tabbing}
+  \item Let $T$ be a binary search tree.
+  \begin{tabbing}
+    (1) \= (1.1) \= (1.1.1) \=  \kill
+    subroutine \textbf{visit} $S$ \\
+    (1) \> if $S$ is empty then return; \\
+    (2) \> \textbf{visit} \textbf{right}($S$);\\
+    (3) \> output $S$; \\
+    (4) \> \textbf{visit} \textbf{left}($S$).\\
+    \\
+    (1) \> \textbf{visit} \textbf{left}($T$).
+  \end{tabbing}
+  \end{enumerate}
 
 \end{document}
