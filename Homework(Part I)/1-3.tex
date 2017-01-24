@@ -54,9 +54,9 @@
 
   \section{[UD] Problem 6.15}
   \begin{enumerate}[(a)]
-    \item $A$ is the graph of the inequality $y \neq 0$ with respect to $x$ and $y$. In other words, $A$ is a collection of points in a plane whose y-coordinate is nonzero.
+    \item $A$ is the graph of the inequality $y \neq 0$ with respect to $x$ and $y$. In other words, $A$ is a collection of points in a plane whose y-coordinate are nonzero.
     \item Since $(x,y)$, $(z,w)$ are elements of $A$, we have $y \neq 0$ and $w \neq 0$. Thus, $wy \neq 0$, which means $(xw+zy, wy)$ is again an object in $A$. \hfill $\square$
-    \item $(a,b) \diamond (x,y)=(ay+bx,by)=(x,y)$ for every $(x,y)$ in $A$. Compare the coefficients of $x,y$, we get $a=0$ and $b=1$, so the element is $(0,1)$.
+    \item $(a,b) \diamond (x,y)=(ay+bx,by)=(x,y)$ holds for every $(x,y)$ in $A$. Compare the coefficients of $x,y$, we get $a=0$ and $b=1$, so the element is $(0,1)$.
     \item For every element $(a,b)$ in $A$, if we regard $a$ as the numerator, and $b$ as the denominator, we can find that this ``new'' addition shows the addition of two fractions:
         $$\frac{x}{y}+\frac{z}{w}=\frac{xw+zy}{wy}.$$
   \end{enumerate}
@@ -69,7 +69,7 @@
     \item Take $m=0$ and $n=1$, we have $g(1)=g(0)g(1)$. Cancel the positive real number $g(1)=a$ on both sides, we get $g(0)=0$. \hfill $\square$
     \item Let $P(n)$ denote that $g(n)=a^n$. For the base step, we have to check $g(1)=1$, this is obviously true because this is one of the properties of $g$. \par
         For the induction step, assume that $P(n)$ holds for a positive integer $n$. That is $g(n)=a^n$. Apply the second property of $g$, we get $g(n+1)=g(n)g(1)=a^n \times a=a^{n+1}$. Thus, $P(n+1)$ holds. \par
-        By mathematical induction, we conclude that $g(n)=a^n$ for all $n \in \mathbb(N)$. \hfill $\square$
+        By mathematical induction, we conclude that $g(n)=a^n$ for all $n \in \mathbb{N}$. \hfill $\square$
   \end{enumerate}
 
   \section{[UD] Problem 17.13}
@@ -137,7 +137,7 @@
     Divide the square into four identical small squares as Figure 3 shows. Each small square includes its border. By the Pigeonhole Principle, there exists one small square who has at least two points. In one small square, the maximum of the distance of two points is $\sqrt{2}/2$, the length of the diagonal. So there always exist two points whose distance is at most $\sqrt{2}/2$. \hfill $\square$
   \begin{figure}[htbp]
     \centering
-    \includegraphics[width=3cm]{figures/fig3.png} \\
+    \includegraphics[width=5cm]{figures/fig3.png} \\
     \caption*{Figure 3: the square is divided into four small squares}
   \end{figure}
 
@@ -148,9 +148,9 @@
         (even, even, even) &(even, even, odd) &(even, odd, even) &(even, odd, odd) \\
         (odd, even, even) &(odd, even, odd) &(odd, odd, even) &(odd, odd, odd)
       \end{matrix}$$
-    By the Pigeonhole Principle, there exists two points who have the same parity. Let $(a, b, c)$ and $(d, e, f)$ be the two points, recall the midpoint formula, the coordinates of their midpoint is
+    By the Pigeonhole Principle, there exist two points who have the same parity. Let $(a, b, c)$ and $(d, e, f)$ be the two points, recall the midpoint formula, the coordinates of their midpoint are
     $$ \left(\frac{a+d}{2}, \frac{b+e}{2}, \frac{c+f}{2}\right).$$
-    $\dfrac{a+d}{2}$ is an integer because $a$ and $d$ shares the same parity. $\dfrac{b+e}{2}$ and $\dfrac{c+f}{2}$ are integers likewise. This proves that the midpoint is a lattice point. \hfill $\square$
+    $\dfrac{a+d}{2}$ is an integer because $a$ and $d$ share the same parity. $\dfrac{b+e}{2}$ and $\dfrac{c+f}{2}$ are integers likewise. This proves that the midpoint is a lattice point. \hfill $\square$
 
   \section{[ES] Problem 24.8}
 
