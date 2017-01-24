@@ -1,6 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{ctex}
-\usepackage{enumitem}
+\usepackage{enumerate}
 \usepackage{times}
 \usepackage{mathptmx}
 \usepackage{amsmath}
@@ -20,122 +20,46 @@
     \item $(B \cap C) ~\backslash~ A$;
     \item $((A \cap B) \cup (A \cap C) \cup (B \cap C)) ~\backslash~ (A \cup B \cup C)$.
   \end{itemize}
-  
+
   \section{[UD] Problem 6.16}
+  \begin{enumerate}[(a)]
+    \item For every $n$ in $A$, $n = x^2$ where $x$ is an integer, therefore $n$ is an integer, i.e. $n \in B$, so $A \subseteq B$. \hfill $\square$
+    \item For every $t$ in $A$, $t$ is a real number, there exists a real number $x=t/2$, such that $t=2x$, so $t \in B$. Therefore $A \subseteq B$. \hfill $\square$
+    \item For every point $(x,y)$ in $A$, we have $y=(5-3x)/2$, therefore $2y+3x=5$, which means that $(x,y)$ is also in $B$. So $A \subseteq B$. \hfill $\square$
+  \end{enumerate}
 
   \section{[UD] Problem 6.17}
-
-
-  \section{[UD] Problem 1.5}
-  \begin{enumerate}
-    \item 假设你住在一幢奇怪的房子里，里面有~7~扇一模一样的、紧关着的门，其中有一扇通向浴室。在第一次尝试时找到浴室的概率是大于、小于还是等于第三次尝试时找到浴室的概率？
-    \item 第一次尝试时，有~7~扇门可能通向浴室，并且由于每扇门完全相同，因而是等可能的；第三次尝试时只有~5~扇门可能通向浴室，并且也是等可能的。
-    \item 因此，第一次尝试就找到浴室的概率为~$\dfrac{1}{7}$，第三次尝试时找到浴室的概率为~$\dfrac{1}{5}$，答案是\textbf{小于}。
+  \begin{enumerate}[(a)]
+    \item $A$ is a proper subset of $B$. For every $(x,y)$ in $A$, we have $xy>0$, so both $x$ and $y$ are nonzero, thus $x^2+y^2>0$, therefore $A$ is a subset of $B$. However, $(1,-1)$ is an element of $B$, but not an element of $A$, so $A$ is a proper subset of $B$. \hfill $\square$
+    \item $A$ is a proper subset of $B$. By $theorem 6.10$, we have $A \subseteq$. However, $(0,0)$ is an element of $B$, but not an element of $A$, so $A$ is a proper subset of $B$. \hfill $\square$
   \end{enumerate}
 
-  \section{[UD] Problem 1.6}
-  \begin{enumerate}
-    \item 题目的意思是，给出一条通过字母移位编码得到的信息，要求解出原来的信息是什么。
-    \begin{itemize}
-      \item[] \texttt{RDSXCVIWTDGNXHUJCLTLXAAATPGCBDGTPQDJIXIAPITG}
-    \end{itemize}
-    \item 可以将上述字符串中的所有字母移位~1~至~25，找出有合理意义的那一条即可。
-    \item 经过~1~至~25~次移位后，所有的字符串为：
-    \begin{itemize}
-      \item[] \texttt{SETYDWJXUEHOYIVKDMUMYBBBUQHDCEHUQREKJYJBQJUH}
-      \item[] \texttt{TFUZEXKYVFIPZJWLENVNZCCCVRIEDFIVRSFLKZKCRKVI}
-      \item[] \texttt{UGVAFYLZWGJQAKXMFOWOADDDWSJFEGJWSTGMLALDSLWJ}
-      \item[] \texttt{VHWBGZMAXHKRBLYNGPXPBEEEXTKGFHKXTUHNMBMETMXK}
-      \item[] \texttt{WIXCHANBYILSCMZOHQYQCFFFYULHGILYUVIONCNFUNYL}
-      \item[] \texttt{XJYDIBOCZJMTDNAPIRZRDGGGZVMIHJMZVWJPODOGVOZM}
-      \item[] \texttt{YKZEJCPDAKNUEOBQJSASEHHHAWNJIKNAWXKQPEPHWPAN}
-      \item[] \texttt{ZLAFKDQEBLOVFPCRKTBTFIIIBXOKJLOBXYLRQFQIXQBO}
-      \item[] \texttt{AMBGLERFCMPWGQDSLUCUGJJJCYPLKMPCYZMSRGRJYRCP}
-      \item[] \texttt{BNCHMFSGDNQXHRETMVDVHKKKDZQMLNQDZANTSHSKZSDQ}
-      \item[] \textbf{\texttt{CODINGTHEORYISFUNWEWILLLEARNMOREABOUTITLATER}}
-      \item[] \texttt{DPEJOHUIFPSZJTGVOXFXJMMMFBSONPSFBCPVUJUMBUFS}
-      \item[] \texttt{EQFKPIVJGQTAKUHWPYGYKNNNGCTPOQTGCDQWVKVNCVGT}
-      \item[] \texttt{FRGLQJWKHRUBLVIXQZHZLOOOHDUQPRUHDERXWLWODWHU}
-      \item[] \texttt{GSHMRKXLISVCMWJYRAIAMPPPIEVRQSVIEFSYXMXPEXIV}
-      \item[] \texttt{HTINSLYMJTWDNXKZSBJBNQQQJFWSRTWJFGTZYNYQFYJW}
-      \item[] \texttt{IUJOTMZNKUXEOYLATCKCORRRKGXTSUXKGHUAZOZRGZKX}
-      \item[] \texttt{JVKPUNAOLVYFPZMBUDLDPSSSLHYUTVYLHIVBAPASHALY}
-      \item[] \texttt{KWLQVOBPMWZGQANCVEMEQTTTMIZVUWZMIJWCBQBTIBMZ}
-      \item[] \texttt{LXMRWPCQNXAHRBODWFNFRUUUNJAWVXANJKXDCRCUJCNA}
-      \item[] \texttt{MYNSXQDROYBISCPEXGOGSVVVOKBXWYBOKLYEDSDVKDOB}
-      \item[] \texttt{NZOTYRESPZCJTDQFYHPHTWWWPLCYXZCPLMZFETEWLEPC}
-      \item[] \texttt{OAPUZSFTQADKUERGZIQIUXXXQMDZYADQMNAGFUFXMFQD}
-      \item[] \texttt{PBQVATGURBELVFSHAJRJVYYYRNEAZBERNOBHGVGYNGRE}
-      \item[] \texttt{QCRWBUHVSCFMWGTIBKSKWZZZSOFBACFSOPCIHWHZOHSF}
-    \end{itemize}
-    其中粗体那一行有实际意义，将单词分割开，并加上标点符号，得到：
-    \begin{itemize}
-      \item[] \textbf{\texttt{CODING THEORY IS FUN, WE WILL LEARN MORE ABOUT IT LATER.}}
-    \end{itemize}
+  \section{[UD] Problem 7.1}
+  \begin{enumerate}[(a)]
+    \item For every $x$ in universe, by definition of complement, if $x \in A$, then $x \notin A^c$ and if $x \notin A^c$ then $x \in (A^c)^c$, therefore we have if $x \in A$, then $x \in (A^c)^c$, i.e. $A$ is a subset of $(A^c)^c$. $(A^c)^c$ is a subset of $A$ likewise. So $(A^c)^c=A$. \hfill $\square$
+    \item For every $x$ in $A \cap (B \cup C)$, we have $x \in A$, and $x \in B$ or $C$, so $x \in A$ and $B$ or $x \in A$ and $C$, thus $A \cap (B \cup C)$ is a subset of $(A \cap B) \cup (A \cap C)$. For every $x$ in $(A \cap B) \cup (A \cap C)$, we have $x \in A$ and $B$ or $x \in A$ and $C$, so $x \in A$, and $x \in B$ or $C$, thus $(A \cap B) \cup (A \cap C)$ is a subset of $A \cap (B \cup C)$. So $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$. \hfill $\square$
+    \item For every $x$ in $X ~\backslash~ (A \cap B)$, we have $x \in X$ and, $x \notin A$ or $x \notin B$, thus $x \in X$ and $x \notin A$, or $x \in X$ and $x \notin B$, therefore $X ~\backslash~ (A \cap B)$ is a subset of $(X ~\backslash~ A) \cup (X ~\backslash~ B)$. For every $x$ in $(X ~\backslash~ A) \cup (X ~\backslash~ B)$, we have $x \in X$ and $x \notin A$, or $x \in X$ and $x \notin B$, thus $x \in X$ and, $x \notin A$ or $x \notin B$, so $(X ~\backslash~ A) \cup (X ~\backslash~ B)$ is a subset of $X ~\backslash~ (A \cap B)$. Therefore $X ~\backslash~ (A \cap B) = (X ~\backslash~ A) \cup (X ~\backslash~ B)$. \hfill $\square$
+    \item Since $A, B$ are subsets of $X$, for every $x \in X$, if $x \in A$ then $x \in B$ and if $x \notin B$ then $x \notin A$ are equivalent, so $A \subseteq B$ if and only if $(X ~\backslash~ B) \subseteq (X ~\backslash~ A)$. \hfill $\square$
+    \item If $A \cap B = B$, then for every $x$, $x \in B$ and $x \in A$ and $B$ are equivalent, so $x \in B$ implies $x \in A$, i.e. $A$ is a subset of $B$. If $B \subseteq A$, for every $x$, $x \in B$ implies $x \in A$, thus $x \in B$ and $x \in A$ and $B$ are equivalent, so $A \cap B = B$. Therefore, $A \cap B = B$ if and only if $B \subseteq A$. \hfill $\square$
   \end{enumerate}
 
-  \section{[UD] Problem 1.8}
-  \begin{enumerate}
-    \item 有~12~枚看起来一样的硬币，其中有~1~枚是假的，其重量与真的不同。给一架天平，要求用最少的称量次数找出那枚假币。
-    \item 考虑一个较简单的情况：只有~4~枚硬币，其他条件相同。将这~4~枚硬币依次编号为~1, 2, 3, 4~。首先，将~1~号和~2~号硬币放在天平左右两端称量，若
-        \begin{enumerate}
-          \item 重量相等，说明~1, 2~是真的，~3, 4~是假的。这时将~1~号和~3~号硬币放在天平左右两端称量，若
-            \begin{enumerate}
-              \item 重量相等，说明~4~是假的；
-              \item 重量不相等，说明~3~是假的。
-            \end{enumerate}
-          \item 重量不相等，说明~3, 4~是真的，~1, 2~是假的。这时将~1~号和~3~号硬币放在天平左右两端称量，若
-            \begin{enumerate}
-              \item 重量相等，说明~2~是假的；
-              \item 重量不相等，说明~1~是假的。
-            \end{enumerate}
-        \end{enumerate}
-        上面的讨论表明，要从~4~枚硬币中找出假币，称~2~次即可。
-    \item 下面讨论~12~枚硬币的情况。将其依次编号为~1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12~。 将~1, 2, 3, 4~放在天平左端，~5, 6, 7, 8~放在天平右端称量，若
-        \begin{enumerate}
-          \item 重量相等，说明假币在~9, 10, 11, 12~中。用~2.~中的方法找出即可。
-          \item 天平左端较重。将~1, 2, 5~放在天平左端，~3, 6, 9~ 放在天平右端称量，若
-            \begin{enumerate}
-              \item 天平左端较重，则~1, 2~可能是假币且较重，6~ 也可能是假币且较轻。将~1, 6~放在天平左端，~9, 10~放在天平右端，若
-              \begin{enumerate}
-                \item 重量相等，则~2~是假的；
-                \item 天平左端较重，则~1~是假的；
-                \item 天平右端较重，则~6~是假的。
-              \end{enumerate}
-              \item 天平右端较重，则~3~可能是假币且较重，5~也可能是假币且较轻。将~3, 5~ 放在天平左端，~9, 10~ 放在天平右端，若
-              \begin{enumerate}
-                \item 天平左端较重，则~3~是假的；
-                \item 天平右端较重，则~5~是假的。
-              \end{enumerate}
-              \item 重量相等，则~4~可能是假币且较重，7, 8~也可能是假币且较轻。将~4, 7~ 放在天平左端，~9, 10~ 放在天平右端，若
-              \begin{enumerate}
-                \item 重量相等，则~8~是假的；
-                \item 天平左端较重，则~4~是假的；
-                \item 天平右端较重，则~7~是假的。
-              \end{enumerate}
-            \end{enumerate}
-          \item 天平右端较重。将~1, 2, 5~放在天平左端，~3, 6, 9~ 放在天平右端称量，若
-            \begin{enumerate}
-              \item 天平左端较重，则~5~可能是假币且较重，3~也可能是假币且较轻。将~3, 5~ 放在天平左端，~9, 10~ 放在天平右端，若
-              \begin{enumerate}
-                \item 天平左端较重，则~5~是假的；
-                \item 天平右端较重，则~3~是假的。
-              \end{enumerate}
-              \item 天平右端较重，则~6~可能是假币且较重，1, 2~ 也可能是假币且较轻。将~1, 6~放在天平左端，~9, 10~放在天平右端，若
-              \begin{enumerate}
-                \item 重量相等，则~2~是假的；
-                \item 天平左端较重，则~6~是假的；
-                \item 天平右端较重，则~1~是假的。
-              \end{enumerate}
-              \item 重量相等，则~7, 8~可能是假币且较重，4~也可能是假币且较轻。将~4, 7~ 放在天平左端，~9, 10~ 放在天平右端，若
-              \begin{enumerate}
-                \item 重量相等，则~8~是假的；
-                \item 天平左端较重，则~7~是假的；
-                \item 天平右端较重，则~4~是假的。
-              \end{enumerate}
-            \end{enumerate}
-        \end{enumerate}
-        上面的讨论表明，称量~3~次即可从这~12~枚硬币中找出假币。下面证明不可能以少于~3~次的称量，从~12~枚硬币中找出假币。假设称量~2~次即可找出假币，每次称量的结果有左边重、右边重、重量相等这~3~种，称~2~次一共可能的结果组合有~$3 \times 3 = 9$~ 种，而一共有~12~枚硬币是假币，从而至少有~1~ 种结果组合不能确定哪一枚硬币是假币。综上，从~12~枚硬币中找出假币的最少称量次数为\textbf{~3~次}。
+  \section{[UD] Problem 7.8}
+  \begin{enumerate}[(a)]
+    \item (ii);
+    \item (i), (ii), (iii), (iv), (v);
+    \item For every $x$ in $(A \cap B)~\backslash~ C$, we have $x \in A$ and $B$ and $x \notin C$, so $x \in A$ and $x \notin C$, and $x \in B$ and $x \notin C$, thus $(A \cap B)~\backslash~ C$ is a subset of $(A~\backslash~ C) \cap ( B~\backslash~ C$. Likewise $(A~\backslash~ C) \cap ( B~\backslash~ C$ is a subset of $(A \cap B)~\backslash~ C$. Therefore $(A \cap B)~\backslash~ C = (A~\backslash~ C) \cap ( B~\backslash~ C)$. \hfill $\square$
+
+  \end{enumerate}
+  
+  \section{[UD] Problem 7.9}
+  \begin{enumerate}[(a)]
+    \item For every $x$ in $A ~\backslash~ B$, we have $x \in A$ and $x \notin B$, so $A~\backslash~B$ and $B$ are disjoint. \hfill $\square$
+    \item For every $x$ in $A \cup B$, we have $x \in A$ or $x \in B$, so $x \in A$, or $x \in B$ and $x \notin A$, therefore $A \cup B$ is a subset of $(A ~\backslash B) \cup B$. For every $x$ in $(A ~\backslash B) \cup B$, we have $x \in A$, or $x \in B$ and $x \notin A$, so $x \in A$ or $x \in B$, therefore $(A ~\backslash B) \cup B$ is a subset of $A \cup B$. So $A \cup B = (A ~\backslash B) \cup B$ \hfill $\square$
   \end{enumerate}
 
+  \section{[UD] Problem 7.10}
+    This statement is false. Here is a counterexample. Let $A=\{1,2\}$, $B=\{1\}$ and $C=\{2\}$, then $A \cup B = A \cup C$, but $B \neq C$. \hfill $\square$
+
+  \section{[UD] Problem 7.11}
+    This statement is true. We know that for every $x$, $x \in S$ if and only if ${x} \cap S = {x}$. For every $x \in A$, let $Y = {x}$, then $B \cap Y = A \cap Y = {x}$, so $x \in B$, thus $A$ is a subset of $B$. $B$ is a subset of $A$ likewise. So the statement is true.  \hfill $\square$
 \end{document}
