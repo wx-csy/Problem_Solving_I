@@ -5,7 +5,10 @@
 \usepackage{mathptmx}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
 \begin{document}
   \title{论题~1-6~作业}
   \author{姓名：陈劭源 \and 学号：161240004}
@@ -31,7 +34,7 @@
   \section{[UD] Problem 6.17}
   \begin{enumerate}[(a)]
     \item $A$ is a proper subset of $B$. For every $(x,y)$ in $A$, we have $xy>0$, so both $x$ and $y$ are nonzero, thus $x^2+y^2>0$, therefore $A$ is a subset of $B$. However, $(1,-1)$ is an element of $B$, but not an element of $A$, so $A$ is a proper subset of $B$. \hfill $\square$
-    \item $A$ is a proper subset of $B$. By $theorem 6.10$, we have $A \subseteq$. However, $(0,0)$ is an element of $B$, but not an element of $A$, so $A$ is a proper subset of $B$. \hfill $\square$
+    \item $A$ is a proper subset of $B$. By theorem 6.10, we have $A \subseteq B$. However, $(0,0)$ is an element of $B$, but not an element of $A$, so $A$ is a proper subset of $B$. \hfill $\square$
   \end{enumerate}
 
   \section{[UD] Problem 7.1}
@@ -50,7 +53,7 @@
     \item For every $x$ in $(A \cap B)~\backslash~ C$, we have $x \in A$ and $B$ and $x \notin C$, so $x \in A$ and $x \notin C$, and $x \in B$ and $x \notin C$, thus $(A \cap B)~\backslash~ C$ is a subset of $(A~\backslash~ C) \cap ( B~\backslash~ C$. Likewise $(A~\backslash~ C) \cap ( B~\backslash~ C$ is a subset of $(A \cap B)~\backslash~ C$. Therefore $(A \cap B)~\backslash~ C = (A~\backslash~ C) \cap ( B~\backslash~ C)$. \hfill $\square$
 
   \end{enumerate}
-  
+
   \section{[UD] Problem 7.9}
   \begin{enumerate}[(a)]
     \item For every $x$ in $A ~\backslash~ B$, we have $x \in A$ and $x \notin B$, so $A~\backslash~B$ and $B$ are disjoint. \hfill $\square$
@@ -62,4 +65,82 @@
 
   \section{[UD] Problem 7.11}
     This statement is true. We know that for every $x$, $x \in S$ if and only if ${x} \cap S = {x}$. For every $x \in A$, let $Y = {x}$, then $B \cap Y = A \cap Y = {x}$, so $x \in B$, thus $A$ is a subset of $B$. $B$ is a subset of $A$ likewise. So the statement is true.  \hfill $\square$
+
+  \section{[UD] Problem 8.1}
+  \begin{enumerate}[(a)]
+    \item $\displaystyle \bigcup_{n=1}^\infty A_n=[0, 1) \cup [0,1/2) \cup [0,1/3) \cdots = [0,1)$ ; \\
+        $\displaystyle \bigcup_{n=1}^\infty B_n=[0, 1] \cup [0,1/2] \cup [0,1/3] \cdots = [0,1]$ ; \\
+        $\displaystyle \bigcup_{n=1}^\infty C_n=(0, 1) \cup (0,1/2) \cup (0,1/3) \cdots = (0,1)$
+    \item $\displaystyle \bigcap_{n=1}^\infty A_n=[0, 1) \cap [0,1/2) \cap [0,1/3) \cdots = \{0\}$ ; \\
+        $\displaystyle \bigcap_{n=1}^\infty B_n=[0, 1] \cap [0,1/2] \cap [0,1/3] \cdots = \{0\}$ ; \\
+        $\displaystyle \bigcap_{n=1}^\infty C_n=(0, 1) \cap (0,1/2) \cap (0,1/3) \cdots = \varnothing$
+    \item No. Because $A_0$ is undefined.
+  \end{enumerate}
+
+  \section{[UD] Problem 8.4}
+  This statement is false. Here is a counterexample: let $A_n=(n,n+\dfrac{1}{2})$, $B_n=[n,n+\dfrac{1}{2}]$, for all positive integer $n$, $A_n \subset B_n$ holds, however,
+    $$\bigcap_{n=1}^\infty A_n = \bigcap_{n=1}^\infty B_n = \varnothing$$
+  which does not satisfy the definition of strict inclusion.
+
+  \section{[UD] Problem 8.7}
+  \begin{enumerate}[(a)]
+    \item Suppose, to the contrary, that $\displaystyle \bigcap_{\alpha \in I} A_\alpha \neq \varnothing$, then there exists $\displaystyle x \in \bigcap_{\alpha \in I} A_\alpha$, however, there exists $\alpha_0 \in I$ such that $A_{\alpha_0} = \varnothing$, so $x \in \varnothing$, which leads to a contradiction. Therefore $\displaystyle \bigcap_{\alpha \in I} A_\alpha = \varnothing$. \hfill $\square$
+    \item Let $X$ be the universe. For all $x$ in $X$, there exists $\alpha_0 \in I$, such that $A_{\alpha_0}=X$, so $\displaystyle x \in \bigcup_{\alpha \in I} A_\alpha = X$. \hfill $\square$
+    \item For all $x \in B$, for all $\alpha \in I$, we have $x \in A_\alpha$, so $\displaystyle x \in \bigcap_{\alpha \in I} A_\alpha$, therefore $\displaystyle B \subseteq \bigcap_{\alpha \in I} A_\alpha$.  \hfill $\square$
+  \end{enumerate}
+
+  \section{[UD] Problem 8.8}
+  $A = \mathbb{Z}$. \par
+  Proof: for every integer $m$, there exists $n=|m|$ such that $m \notin \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, thus $\displaystyle n \notin \bigcap_{n \in \mathbb{Z}^+} \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, i.e. $m \in A$, so $\mathbb{Z}$ is a subset of $A$. For every $x$ in $A$, $\displaystyle x \notin \bigcap_{n \in \mathbb{Z}^+} \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, that is, there exists a positive integer $n$, such that $x \notin \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, i.e. $x \in \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, so $x \in \mathbb{Z}$, therefore $\mathbb{Z}$ is a subset of $A$. By the definition of equality of two sets, we get $\mathbb{Z} = A$. \hfill $\square$
+
+  \section{[UD] Problem 8.9}
+  $A=\mathbb{Q} ~\backslash~ \{n: n \neq 2m, m\in \mathbb{Z}\}$. \par
+  Proof: for every real number $x$ in $\displaystyle \bigcap_{n \in \mathbb{Z}}(\mathbb{R}~\backslash~\{2n\})$, for every integer $n$, we have $x \notin \mathbb{R} ~\backslash~ {2n}$, so $\displaystyle \bigcap_{n \in \mathbb{Z}}(\mathbb{R}~\backslash~\{2n\})$ is a subset of $\{n: n \neq 2m, m\in \mathbb{Z}\}$. For every real number $x$ in $\{n: n \neq 2m, m\in \mathbb{Z}\}$, we have that for all integer $n$, $x \in \mathbb{R}~\backslash~\{2n\}$, so $\displaystyle x \in \bigcap_{n \in \mathbb{Z}}(\mathbb{R}~\backslash~\{2n\})$, therefore $\{n: n \neq 2m, m\in \mathbb{Z}\}$ is a subset of $\displaystyle x \in \bigcap_{n \in \mathbb{Z}}(\mathbb{R}~\backslash~\{2n\})$. By the definition of equality of two sets, we have $\displaystyle \{n: n \neq 2m, m\in \mathbb{Z}\} = \bigcap_{n \in \mathbb{Z}}(\mathbb{R}~\backslash~\{2n\})$, and this completes the proof. \hfill $\square$
+
+  \section{[UD] Problem 8.11}
+  \begin{enumerate}[(a)]
+    \item $A_\alpha=\{\alpha\}$, $(I=\mathbb{Z})$;
+    \item if $A_\alpha \neq A_\beta$, then $A_\alpha \cap A_\beta = \varnothing$;
+    \item if $A_\alpha = A_\beta$, then $A_\alpha \cap A_\beta \neq \varnothing$;
+    \item Yes.
+    \item Yes.
+    \item Yes, except the trivial case: there is only zero or one element in $I$.
+    \item No. Here is a counterexample: $\{A_\alpha : A_\alpha = \{1,2,3\} ~\backslash~ \{\alpha\}, \alpha \in I\}$, $(I=\{1,2,3\})$.
+  \end{enumerate}
+
+  \section{[UD] Problem 9.2}
+  \begin{enumerate}[(a)]
+    \item By the definition of the power set, for every $X$ in  $\mathcal{P}(A) \cup \mathcal{P}(A)$, $X$ is a subset of $A$ or $B$, so $X$ is a subset of $A \cup B$, therefore $\mathcal{P}(A) \cup \mathcal{P}(A) \subseteq \mathcal{P}(A \cup B)$.
+    \item Let $A=\{1\}$, $B=\{2\}$, then $A \cup B = {1,2}$, $\mathcal{P}(A)=\{\{1\},\varnothing\}$, $\mathcal{P}(B)=\{\{2\},\varnothing\}$,
+        $\mathcal{P}(A) \cup \mathcal{P}(B) = \{\{1\},\{2\},\varnothing\}$, $\mathcal{P}(A \cup B)=\{\{1\},\{2\},\{1,2\},\varnothing\}$, $\mathcal{P}(A) \cup \mathcal{P}(B) \neq \mathcal{P}(A \cup B)$.
+  \end{enumerate}
+
+  \section{[UD] Problem 9.4}
+  If $A \subseteq B$, then for all set $X$ such that $X$ is a subset of $A$, $X$ is also a subset of $B$, so $\mathcal{P}(A) \subseteq \mathcal{P}(B)$. \par
+  If $\mathcal{P}(A) \subseteq \mathcal{P}(B)$, then $A \in \mathcal{P}(A) \subseteq \mathcal{P}(B)$, thus $A$ is a subset of $B$. \par
+  Therefore, $A \subseteq B$ if and only if $\mathcal{P}(A) \subseteq \mathcal{P}(B)$. \hfill $\square$
+
+  \section{[UD] Problem 9.12}
+  \begin{enumerate}[(a)]
+    \item The sufficiency is obvious, and we only have to prove the necessity. Assume, to the contrary, that $A \neq C$ or $B \neq D$. Without loss of generality, suppose $A \neq C$. Therefore, there exists $x$ such that $x \in A$ and $x \notin C$, or $x \notin A$ and $x \in C$. Suppose $x \in A$ and $x \notin C$ without loss of generality. Since $B$ is a nonempty set, there exists $y$ in $B$. Consider $(x,y)$, by the definition of Cartesian product, it is an element of $A \times B$, however it isn't an element of $C \times D$, because $x$ is not an element of $C$. Therefore, $A \times B = C \times D$ if and only if $A = C$ and $B = D$. \hfill $\square$
+    \item In the construction of $(x,y)$, we need to take an element $y$ in $B$, and this requires the sets are nonempty.
+  \end{enumerate}
+
+  \section{[UD] Problem 9.13}
+  No. Let $A=\{1\}, C=\{2\}, B=D=\varnothing$, then $A \times B = C \times D = \varnothing$, so $A \times B \subseteq C \times D$, however $A \nsubseteq C$.
+
+  \section{[UD] Problem 9.14}
+  \begin{enumerate}[(a)]
+    \item True. For all $(x,y)$ in $A \times (B \cup C)$, we have $x \in A$ and $y \in B \cup C$, so $x \in A$ and $y \in B$, or $x \in A$ and $y \in C$, hence $x \in (A \times B) \cup (A \times C)$, therefore, $A \times (B \cup C)$ is a subset of $x \in (A \times B) \cup (A \times C)$. For all $(x,y)$ in $x \in (A \times B) \cup (A \times C)$, we have $x \in A$ and $y \in B$, or $x \in A$ and $y \in C$, so $x \in A$ and $y \in B \cup C$, therefore $x \in (A \times B) \cup (A \times C)$ is a subset of $A \times (B \cup C)$. By the definition of the equality of two sets, we get $A \times (B \cup C)=x \in (A \times B) \cup (A \times C)$. \hfill $\square$
+    \item True. For all $(x,y)$ in $A \times (B \cap C)$, we have $x \in A$ and $y \in B \cap C$, so $x \in A$ and $y \in B$, and $x \in A$ and $y \in C$, hence $x \in (A \times B) \cap (A \times C)$, therefore, $A \times (B \cap C)$ is a subset of $x \in (A \times B) \cap (A \times C)$. For all $(x,y)$ in $x \in (A \times B) \cap (A \times C)$, we have $x \in A$ and $y \in B$, and $x \in A$ and $y \in C$, so $x \in A$ and $y \in B \cap C$, therefore $x \in (A \times B) \cap (A \times C)$ is a subset of $A \times (B \cap C)$. By the definition of the equality of two sets, we get $A \times (B \cap C)=x \in (A \times B) \cap (A \times C)$. \hfill $\square$
+  \end{enumerate}
+
+  \section{[UD] Problem 9.16}
+  \begin{enumerate}[(a)]
+    \item If $a=b$, then $(a,b)=\{\{a\},\{a,b\}\}=\{\{a\},\{a\}\}=\{\{a\}\}$, thus $\{\{x\},\{x,y\}\}=\{\{a\}\}$, so $\{x\}=\{x,y\}=\{a\}$, therefore $x=y=a$. Hence $a=x$ and $b=y$. \par
+        If $a \neq b$, then $\{\{a\},\{a,b\}\}=\{\{x\},\{x,y\}\}$. Suppose $\{a\}=\{x,y\}$, then $a=x=y$, so $\{\{a\},\{a,b\}\}=\{\{x\},\{x,y\}\}=\{\{x\}\}$, thus $\{a\}=\{a,b\}$, and therefore $a=b$, which contradicts $a \neq b$. So $\{a\}=\{x\}$, therefore $a=x$ and $\{a,b\}=\{x,y\}$. If $a=y$, then $a=x=y$, thus $\{a,b\}=\{x,y\}=\{x\}$, therefore $a=b$, which contradicts $a \neq b$. So $a \neq y$, therefore $a=x$ and $b=y$. \hfill $\square$
+    \item Since $\{a\}$ and $\{a,b\}$ are subsets of $A \cup B$, they are both the elements of $\mathcal{P}(A \cup B)$,  therefore, $(a,b) = \{\{a\},\{a,b\}\} \in \mathcal{P}(\mathcal{P}(A \cup B))$. \hfill $\square$
+    \item For all $x \in \mathcal{P}(\mathcal{P}(A \cup B))$ in $A \times B$, there exists $a \in A$ and $b \in B$, such that $x = (a,b)$. Therefore, $x \in \mathcal{P}(\mathcal{P}(C \cup D))$ (apply the conclusion in Problem 9.4 twice), and $a \in C$ and $b \in D$, so $x \in C \times D$. Therefore, $A \times B \subseteq C\times D$. \hfill $\square$
+  \end{enumerate}
+
 \end{document}
