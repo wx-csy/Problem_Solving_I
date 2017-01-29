@@ -8,6 +8,7 @@
 \usepackage{amssymb}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
 \begin{document}
   \title{论题~1-9~作业}
   \author{姓名：陈劭源 \and 学号：161240004}
@@ -52,11 +53,43 @@
 
   \section{[UD] Problem 11.8}
   First, for all $\alpha \in I \cup J$,  $A_a$ is nonempty because $\{A_\alpha : \alpha \in I\}$ and $\{A_\alpha : \alpha \in J\}$ are both nonempty. Second, for every real number $x$, there exists $\alpha \in I \cup J$ ( $\alpha \in I$ when $x > 0$ and $\alpha \in J$ when $x \leq 0$), therefore $\bigcup \limits_{\alpha \in I \cup J} A_\alpha = \mathbb{R}$. Third, for all $\alpha, \beta \in I$ (or $J$), $A_\alpha = A_\beta$ or $A_\alpha \cap A_\beta$ holds, and for all $\alpha \in I$ and $\beta \in J$, $A_\alpha \cap A_\beta = \varnothing$, therefore for all $\alpha, \beta \in I \cup J$, $A_\alpha = A_\beta$ or $A_\alpha \cap A_\beta$ holds. Hence $\{A_\alpha: \alpha \in I \cup J\}$ is a partition of $\mathbb{R}$.
-  
+
   \section{[UD] Problem 11.9}
     \begin{enumerate}[(a)]
     \item No. Let $X = \{1,2,3\}$, and $\{A_\alpha : \alpha \in I \}= \{\{1\},\{2,3\}\}$ be a partition of $X$. Let $B = \{1,2\} \subseteq X$ such that $B \cap \{1\} \neq \varnothing$ and $B \cap \{2,3\} \neq \varnothing$. However, $\{A_\alpha \cap B : \alpha \in I\} = \{\{1\},\{2\}\}$ is not a partition of $B$, because $\bigcup \limits_{\alpha \in I} A_\alpha \cap B = \{1,2\} \neq X$.
     \item No. Let $X = \{1,2,3\}$, and $\{A_\alpha : \alpha \in I \}= \{\{1\},\{2\},\{3\}\}$ be a partition of $X$. However, $\{X ~\backslash~ A_\alpha : \alpha \in I\} = \{\{1,2\},\{1,3\},\{2,3\}\}$ is not a partition of $X$ because $\{1,2\} \neq \{1,3\}$ and $\{1,2\} \cap \{1,3\} \neq \varnothing$.
     \end{enumerate}
 
+  \section{[UD] Problem 12.10}
+    \begin{enumerate}[(a)]
+    \item Suppose $\sup(S \cup T) < \sup S$.     
+        Since $\sup(S \cup T)$ is an upper bound of $S \cup T$, $\sup(S \cup T)$ is also an upper bound of $S$. However, the least upper bound of $S$, $\sup S$, is greater than $\sup(S \cup T)$, another upper bound of $S$, which leads to contradiction. Therefore $\sup(S \cup T) \geq \sup S$, and likewise $\sup(S \cup T) \geq \sup T$. \hfill $\square$
+    \item Without loss of generality, assume that $\sup S \geq \sup T$. Suppose to the contrary that $\sup (S \cup T) > \sup S$, take $M = \sup (S \cup T) + \sup S$, we have $\sup (S \cup T) > M > \sup S$, and $M$ is the upper bound of $S$ and $T$ because $M > \sup S \geq \sup T$, therefore $M$ is the upper bound of $S \cup T$, however, the least upper bound of $S \cup T$, $\sup (S \cup T)$, is greater than $M$, which leads to contradiction. Therefore $\sup (S \cup T) = \max \{\sup S, \sup T\}$. \hfill $\square$
+    \item The supremum of the union of two sets is greater than or equal to the supremum of either set. In fact, the supremum of the union of two sets is the maximum of the suprema of the two sets.
+    \end{enumerate}
+
+  \section{[UD] Problem 12.13b}
+  (Reflexive) For all $S \in \mathcal{P}(A)$, $S$ is a subset of $S$, so $S \subseteq S$; \par
+  (Transitive) For all $A,B,C \in \mathcal{P}(A)$, if $A$ is a subset of $B$ and $B$ is a subset of $C$, then for all $x \in A$, $x$ is an element of $B$, thus $x$ is an element of $C$, therefore, $A$ is a subset of $C$; \par
+  (Antisymmetric) By the definition of the equality of two sets, the antisymmetric property holds for $(\mathcal{P}(A),\subseteq)$. \par
+  Let $a, b$ be two distinct elements of $A$, then neither $\{a\} \subseteq \{b\}$ nor $\{b\} \subseteq \{a\}$ holds, therefore $(\mathcal{P}(A),\subseteq)$ is a partial order but not a total order. \hfill $\square$
+
+  \section{[UD] Problem 12.16}
+  \begin{enumerate}[(a)]
+    \item We can find that $\{1,2,5,7,8,10\}$ is a least upper bound of $\mathcal{B}$. Therefore $\mathcal{B}$ is an upper bounded set. \hfill $\square$
+    \item For every nonempty subset $X$ of $\mathcal{P}(\mathbb{Z})$, for every element $x \in X$, $x$ is an element of $\mathbb{Z}$, therefore $\mathbb{Z}$ is an upper set of $X$. Hence every nonempty subset of $\mathcal{P}(\mathbb{Z})$ is upper bounded. \hfill $\square$
+    \item For every nonempty subset $\mathcal{A}$ of $\mathcal{P}(\mathbb{Z})$ we say that $L \in \mathcal{P}(\mathbb{Z})$ is an lower set of $\mathcal{A}$, if $L \subseteq X$ for all $X \in \mathcal{A}$. A nonempty set $\mathcal{A} \subseteq \mathcal{P}(\mathbb{Z})$ will be called a lower bounded set if there exists a lower set of $\mathcal{A}$ in $\mathcal{P}(\mathbb{Z})$. We say $L_0 \in \mathcal{P}(\mathbb{Z})$ is a least upper set if (i) $U_0$ is a lower set of $\mathcal{A}$ and (ii) if $L$ is another lower set of $\mathcal{A}$, then $L \subseteq L_0$.
+    \item Least upper set of $\mathcal{A}$: $\displaystyle \bigcup_{X \in \mathcal{A}}  X$; \\
+        Greatest lower set of $\mathcal{A}$: $\displaystyle \bigcap_{X \in \mathcal{A}}  X$.
+    \item For every $\mathcal{A} \subseteq \mathcal{P}(\mathbb{Z})$, $\displaystyle \bigcup_{X \in \mathcal{A}}  X$ exists, and it is the least upper set of  $\mathcal{A}$. \hfill $\square$
+  \end{enumerate}
+
+  \section{[UD] Problem 12.20}
+  Suppose $\infty \in \mathbb{R}$, by Archimedean property of $\mathbb{R}$, there exists a positive integer such that $\infty < n$, which is contradictory to $a < \infty$ for all $a \in \mathbb{R}$. Therefore $\infty \notin \mathbb{R}$. \hfill $\square$
+  
+  \section{[UD] Problem 12.22}
+  Let $b = a + \sqrt{2} > a$. Now we are going to prove that $b$ is irrational. Suppose, to the contrary, that $b$ is rational, that is, there exist integers $p, q(q \neq 0)$, such that $b = p/q$. And there exist integers $r, s(s \neq 0)$, such that $a = r/s$ because $a$ is a rational number. We have that $\sqrt{2} = p/q - r/s = (ps-qr)/qs$, thus $\sqrt{2}$ is a rational number, however, we know from Theorem 5.2 that $\sqrt{2}$ is irrational, which leads to contradiction. Therefore, if $a$ is a rational number, there exists an irrational number $b$ such that $a < b$. \hfill $\square$
+
+  \section{[UD] Problem 12.23}
+  With out loss of generality, assume $a \geq 0$ (otherwise let $a'=0$, let $b'=a+b$, and apply the following proof). By theorem 12.11, there exists a rational number $c'$ such that $a/ \sqrt{2} < c' < b/ \sqrt{2}$, and we have $c'>0$. Hence, $a < c'\sqrt{2} < b$. Let $c = c' \sqrt{2} > 0$, and now we are going to prove that $c$ is irrational. Suppose, to the contrary, that $c > 0$ is rational, that is, there exist positive integers $p, q$, such that $c = p/q$. And there exist positive integers $r, s$, such that $c' = r/s$ because $c'$ is a positive rational number. Now we have get that $\sqrt{2} = c/c' = ps/qr$ is a rational number, which is contradictory to Theorem 5.2. Therefore, there exists an irrational number $c$ such that $a<c<b$ for two arbitrary real numbers $a$ and $b$ with $a<b$. \hfill $\square$
 \end{document}
