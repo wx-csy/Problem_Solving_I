@@ -1,0 +1,142 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{ctex}
+\usepackage{enumerate}
+\usepackage{times}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+\begin{document}
+  \title{论题~1-10~作业}
+  \author{姓名：陈劭源 \and 学号：161240004}
+  \date{}
+  \maketitle
+
+  \section{[UD] Problem 13.3}
+  \begin{enumerate}[(a)]
+    \item No. Because both $(1,\sqrt{3})$ and $(1,-\sqrt{3})$ are elements of $f$, however, $\sqrt{3} \neq -\sqrt{3}$.
+    \item No. Because for $x=0$, there does not exist $y \in \mathbb{R}$, such that $y=1/(x+1)$.
+    \item Yes. Because for all $(x,y) \in \mathbb{R}^2$, there exists a unique real number $z$ such that $z = x + y$.
+    \item Yes. Because for every closed interval of real numbers $[a,b]$, there exists a unique real number $a$, such that $([a,b],a) \in f$.
+    \item Yes. Because for every $(n,m) \in \mathbb{N} \times \mathbb{N}$, there exists a unique real number $m$, such that $((n,m),m) \in f$.
+    \item Yes. Because for every real number $x$, there exists a real number $y$, such that $y=0$ when $x\geq 0$ or $y=x$ when $x < 0$, i.e. $(x,y) \in f$.
+    \item No. Because both $(6,7)$ and $(6,5)$ are elements of $f$, however, $7 \neq 5$.
+    \item Yes. Because for every circle $c$ in the plane $\mathbb{R}^2$, there exists a unique real number $C$, such that $C$ is the circumference of $c$.
+    \item Yes. Because for every polynomial with real coefficients $p$, $p$ is differentiable, thus there exists a unique polynomial $p'$, such that $p'$ is the derivative of $p$.
+    \item Yes. Because for every polynomial $p$, $p$ is integrable on $[0,1]$, thus there exists a unique number $I$ such that $I = \int_0^1 p(x)dx$.
+  \end{enumerate}
+
+  \section{[UD] Problem 13.4}
+  We know that $A \cap \mathbb{N}$ is either an empty or a nonempty set. In the case that $A \cap \mathbb{N}$ is empty, there exists a unique integer $-1$, such that $(A,-1) \in f$. In the case that $A \cap \mathbb{N}$ is nonempty, $A \cap \mathbb{N}$ is a subset of $\mathbb{N}$. By well-ordering principle of $\mathbb{N}$, $\min(A\cap\mathbb{N})$ exists, so there exist a unique integer $\min(A\cap\mathbb{N})$, such that $(A,\min(A\cap\mathbb{N})) \in f$. Therefore $f$ is a well-defined function.
+
+  \section{[UD] Problem 13.5}
+  \begin{enumerate}[(a)]
+    \item For all $x \in  X$, either $x \in A$ or $x \in X ~\backslash~ A$ holds, so there exists a unique number $y$ ($y=1$ when $x \in A$ and $y=0$ when $x \in X ~\backslash~ A$), such that $y = \chi_A$. Therefore $\chi_A$ is a function.
+    \item The domain is $X$. The range is $\{0\}$ when $A = \varnothing$, $\{1\}$ when $A=X$, and $\{0,1\}$ when $A \neq \varnothing$ and $A \neq X$.
+  \end{enumerate}
+
+  \section{[UD] Problem 13.7}
+    For every real number $y \neq 1/2$, let $(x-5)/(2x-3)=y$, and we get $x = (3y-5)/(2y-1) \neq 3/2$, which is an element of the domain. So $\ran(f) = \mathbb{R} ~\backslash~\{1/2\}$. \hfill $\square$
+
+  \section{[UD] Problem 13.11}
+  No. For every $x \in A$, there may not exist $y$ such that $(x,y) \in f$. Even though for every $x \in A$ there exists $y$ such that $(x,y) \in f$, we cannot make sure that there only exists one $y$ such that $(x,y) \in f$.
+
+  \section{[UD] Problem 13.13}
+  The only relation is $\{(x,y) \in X^2:x=y\}$. By the reflexion of the equivalence, any relation on $X$ is superset of $\{(x,y) \in X^2:x=y\}$. Assume there exists relation $X'$ such that $X' ~\backslash~ X \neq \varnothing$, let $(a,b)$ be an element of $X'$ such that $a \neq b$. However, $(b,b)$ is an element of $X'$ but $a \neq b$, so $X'$ is not a function.
+
+  \section{[UD] Problem 14.8}
+  \begin{enumerate}[(a)]
+    \item Not one-to-one. $f(1)=f(-1)=1/2$ but $1 \neq -1$.\\
+      Not onto. The range is $(0,1]$.
+    \item Not one-to-one. $sin 0 = sin \pi = 0$ but $0 \neq \pi$.\\
+      Not onto. The range is $[-1,1]$.
+    \item Not one-to-one. $f(1,2)=f(2,1)=2$ but $(1,2) \neq (2,1)$.\\
+        Onto.
+    \item Not one-to-one. $f((1,0),(0,0))=f((0,0),(0,0))=0$ but $((1,0),(0,0)) \neq ((0,0),(0,0))$. \\
+        Onto.
+    \item Not one-to-one. $f((0,0),(0,0))=f((1,1),(1,1))=0$ but $((0,0),(0,0)) \neq ((1,1),(1,1))$. \\
+      Not onto. The range is $[0,+\infty)$.
+    \item One-to-one. \\
+      Not onto. The range is $A \times \{b\}$.
+    \item One-to-one.\\
+    Onto.
+    \item Not one-to-one. $f(X)=f(B)=B$ but $X \neq B$. \\
+      Not onto. The range is $\mathcal{P}(X ~\backslash~ B)$.
+    \item One-to-one.\\
+      Not onto. The range is $(0,+\infty)$.
+  \end{enumerate}
+
+  \section{[UD] Problem 14.12}
+  $f(x)=\dfrac{(d-c)x+cb-da}{b-a} (x \in [a,b])$. \par
+  One-to-one: Let $f(x_1)=f(x_2)$, we have $\dfrac{(d-c)x_1+cb-da}{b-a} = \dfrac{(d-c)x_2+cb-da}{b-a}$. Multiplying $b-a$ and cancelling on both sides, we have $x_1=x_2$. \par
+  Onto: Let $ c \leq f(x) \leq d$, that is $c \leq \dfrac{(d-c)x+cb-da}{b-a} \leq d$. Multiplying $b-a$ and cancelling on both sides, we have $a \leq x \leq b$. It means, for every $x \in [a,b]$, there exists $y$, such that $y=f(x)$, thus $f(x)$ is onto. \par
+  Since $f(x)$ is both one-to-one and onto, $f(x)$ is a bijection. \hfill $\square$
+
+  \section{[UD] Problem 14.13}
+  $\phi$ is a function from $F([0,1])$ to $\mathbb{R}$. Because for all $f \in F([0,1])$, there exists a unique real number $y$, such that $y = f(0)$. \par
+  $\phi$ is not one-to-one. Let $f_1(x)=0 \in F([0,1])$,  $f_2(x)=x \in F([0,1])$, we have that $\phi(f_1)=\phi(f_2)$, however, $f_1\neq f_2$ because $f_1(1) \neq f_2(1)$. \par
+  $\phi$ is onto. For every real number $a$, there exists $f_0(x)=a \in F([0,1])$, such that  $\phi(f_0) = a$.
+
+  \section{[UD] Problem 14.15}
+  For all $x \in \mathbb{R}$, since $f(x)$ is defined on $\mathbb{R}$, there exists a unique real number $y=f(x) \cdot f(x)$, such that $y = (f \cdot f)(x)$, therefore $f \cdot f$ is a function. \hfill $\square$
+  \begin{enumerate}[(a)]
+    \item Yes. $f(x) = e^x$.
+    \item No. $\ran(f \cdot f) = \{a^2: a \in \ran(f)\}$.
+  \end{enumerate}
+
+  \section{[UD] Problem 15.1}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+     & $(f \circ g)(x)$ & $\dom(f \circ g)$ & $\ran(f \circ g)$ & $(g \circ f)(x)$ & $ \dom(g \circ f)$ & $\ran(g \circ f)$ \\
+    \hline
+    (a) & $1/(1+x^2)$ & $\mathbb{R}$ & $(0,1]$ & $1/(1+x)^2$ & $\mathbb{R} ~\backslash~ \{-1\}$ & $\mathbb{R}^+$ \\
+    \hline
+    (b) & $x$ & $\mathbb{R}^+$ & $\mathbb{R}^+$ & $|x|$ & $\mathbb{R}$ & $[0,+\infty)$ \\
+    \hline
+    (c) & $1/(x^2+1)$ & $\mathbb{R}$ & $(0,1]$ & $(1/x^2)+1$ & $\mathbb{R} ~\backslash~ \{0\}$ & $(1,+\infty)$  \\
+    \hline
+    (d) & $|x|$ & $\mathbb{R}$ & $[0,+\infty)$ & $|x|$ & $\mathbb{R}$ & $[0,+\infty)$ \\
+    \hline
+  \end{tabular}
+
+  \section{[UD] Problem 15.6}
+  \begin{enumerate}[(a)]
+    \item $ (f \circ g) (x) = f(g(x))
+      = \dfrac{\dfrac{3+2x}{1-x}-3}{\dfrac{3+2x}{1-x}+2}
+      = \dfrac{\dfrac{5x}{1-x}}{\dfrac{5}{1-x}}
+      = x $, \\ [0.2cm]
+      $ (g \circ f) (x) = g(f(x))
+      = \dfrac{3+2\dfrac{x-3}{x+2}}{1-\dfrac{x-3}{x+2}}
+      = \dfrac{\dfrac{5x}{x+2}}{\dfrac{5}{x+2}}
+      = x $.
+    \item (Theorem 15.4) Let $f: A \rightarrow B$ be a bijective function, and $f^{-1}$ be the inverse of $f$, then $ f \circ g  = i_B$, and $ g \circ f  = i_A$.
+  \end{enumerate}
+
+  \section{[UD] Problem 15.7}
+
+  \section{[UD] Problem 15.11}
+
+  \section{[UD] Problem 15.12}
+
+  \section{[UD] Problem 15.13}
+
+  \section{[UD] Problem 15.14}
+
+  \section{[UD] Problem 15.15}
+
+  \section{[UD] Problem 15.20}
+
+  \section{[UD] Problem 16.19}
+
+  \section{[UD] Problem 16.20}
+
+  \section{[UD] Problem 16.21}
+
+  \section{[UD] Problem 16.22}
+
+\end{document}
