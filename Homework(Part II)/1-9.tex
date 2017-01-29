@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{ctex}
+\usepackage{enumerate}
+\usepackage{times}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\begin{document}
+  \title{论题~1-9~作业}
+  \author{姓名：陈劭源 \and 学号：161240004}
+  \date{}
+  \maketitle
+
+  \section{[UD] Problem 10.2}
+  \begin{enumerate}[(a)]
+    \item $\{(1,1),(2,2),(3,3),(4,4),(5,5)\}$;
+    \item $\{(1,1),(2,2),(2,3),(3,3),(3,4),(4,4),(5,5)\}$;
+    \item $\{(1,2),(2,1)\}$
+    \item $\{(1,2),(2,3),(3,4),(4,5),(5,1)\}$;
+  \end{enumerate}
+
+  \section{[UD] Problem 10.4}
+  Yes. First, it is reflexive, because $x_1-y_1=x_2-y_2=0$ are even when $(x_1,x_2)=(y_1,y_2)$. Second, it is symmetry because both $x_1-y_1$ and $x_2-y_2$ are even if and only if $y_1-x_1$ and $y_2-x_2$ are even. Third, it is transitive, because that both  $x_1-y_1$ and $y_1-z_1$ are even implies $x_1-z_1$ is even, and $x_2-z_2$ is even likewise.
+
+  \section{[UD] Problem 10.5}
+  "If": for all $a \in E_x$, we have $a \sim x$, since $x \sim y$, we get $a \sim y$, therefore $a \in E_y$. Hence $E_x$ is a subset of $E_y$. Likewise $E_y$ is a subset of $E_x$. So $E_x=E_y$. \par
+  "Only if": by the definition of equivalence class, $E_x=\{a \in X: x \sim a\}$, since $y \in E_y$ and $E_x = E_y$, we have $y \in E_x$, that is, $x \sim y$. \hfill $\square$
+
+  \section{[UD] Problem 10.8}
+  \begin{enumerate}[(a)]
+    \item Yes. The equivalence class is $\{\sum\limits_{i=0}^n a_ix^i: a_0=0\}$.
+    \item Yes. $E_r$ is the set of all the polynomials of degree 1.
+    \item No. Because it is not reflexive.
+  \end{enumerate}
+
+  \section{[UD] Problem 11.3}
+  \begin{enumerate}[(a)]
+    \item Yes. $A_r$ represents a plane, on which the sum of the coordinates of a point is $r$.
+    \item Yes. $A_r$ represents a sphere whose center is the origin and its radius is $|r|$.
+  \end{enumerate}
+
+  \section{[UD] Problem 11.7}
+  \begin{enumerate}[(a)]
+    \item Yes. Obviously, for all $m \in \mathbb{N}$, $A_m$ is nonempty. Since every polynomial has a degree, so $\bigcup \limits_{m \in \mathbb{N}} A_m = P$. Every polynomial has only one degree, so that for all $\alpha, \beta \in \mathbb{N}$, $A_\alpha = A_\beta$(when $\alpha = \beta$) or $A_\alpha \cap A_\beta = \varnothing$ (when $\alpha \neq \beta$) holds. Therefore, $A_m$ determine a partition.
+    \item Yes. For all $c \in \mathbb{R}$, there exists a polynomial such that $p(0)=c$, so $A_c$ is always nonempty. We have that $\bigcup \limits_{c \in \mathbb{R}} A_c = P$. For every polynomial, $p(0)$ is a constant, so that for all $\alpha, \beta \in \mathbb{R}$, $A_\alpha = A_\beta$(when $\alpha = \beta$) or $A_\alpha \cap A_\beta = \varnothing$ (when $\alpha \neq \beta$) holds.
+    \item No. Consider $A_x$ and $A_{x^2}$, $x^2$ is an element of both, however, $A_x \neq A_{x^2}$ because $x$ is an element of the former one but not an element of the latter one.
+    \item No. Consider $A_0$ and $A_1$, $x^2-x$ is an element of both, however, $A_0 \neq A_1$ because $x$ is an element of the former one but not an element of the latter one.
+  \end{enumerate}
+
+  \section{[UD] Problem 11.8}
+  First, for all $\alpha \in I \cup J$,  $A_a$ is nonempty because $\{A_\alpha : \alpha \in I\}$ and $\{A_\alpha : \alpha \in J\}$ are both nonempty. Second, for every real number $x$, there exists $\alpha \in I \cup J$ ( $\alpha \in I$ when $x > 0$ and $\alpha \in J$ when $x \leq 0$), therefore $\bigcup \limits_{\alpha \in I \cup J} A_\alpha = \mathbb{R}$. Third, for all $\alpha, \beta \in I$ (or $J$), $A_\alpha = A_\beta$ or $A_\alpha \cap A_\beta$ holds, and for all $\alpha \in I$ and $\beta \in J$, $A_\alpha \cap A_\beta = \varnothing$, therefore for all $\alpha, \beta \in I \cup J$, $A_\alpha = A_\beta$ or $A_\alpha \cap A_\beta$ holds. Hence $\{A_\alpha: \alpha \in I \cup J\}$ is a partition of $\mathbb{R}$.
+  
+  \section{[UD] Problem 11.9}
+    \begin{enumerate}[(a)]
+    \item No. Let $X = \{1,2,3\}$, and $\{A_\alpha : \alpha \in I \}= \{\{1\},\{2,3\}\}$ be a partition of $X$. Let $B = \{1,2\} \subseteq X$ such that $B \cap \{1\} \neq \varnothing$ and $B \cap \{2,3\} \neq \varnothing$. However, $\{A_\alpha \cap B : \alpha \in I\} = \{\{1\},\{2\}\}$ is not a partition of $B$, because $\bigcup \limits_{\alpha \in I} A_\alpha \cap B = \{1,2\} \neq X$.
+    \item No. Let $X = \{1,2,3\}$, and $\{A_\alpha : \alpha \in I \}= \{\{1\},\{2\},\{3\}\}$ be a partition of $X$. However, $\{X ~\backslash~ A_\alpha : \alpha \in I\} = \{\{1,2\},\{1,3\},\{2,3\}\}$ is not a partition of $X$ because $\{1,2\} \neq \{1,3\}$ and $\{1,2\} \cap \{1,3\} \neq \varnothing$.
+    \end{enumerate}
+
+\end{document}
