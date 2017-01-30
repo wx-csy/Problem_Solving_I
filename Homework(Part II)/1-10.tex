@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage[all]{xy}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 
 \DeclareMathOperator{\dom}{dom}
@@ -53,7 +54,7 @@
   \begin{enumerate}[(a)]
     \item Not one-to-one. $f(1)=f(-1)=1/2$ but $1 \neq -1$.\\
       Not onto. The range is $(0,1]$.
-    \item Not one-to-one. $sin 0 = sin \pi = 0$ but $0 \neq \pi$.\\
+    \item Not one-to-one. $\sin 0 = \sin \pi = 0$ but $0 \neq \pi$.\\
       Not onto. The range is $[-1,1]$.
     \item Not one-to-one. $f(1,2)=f(2,1)=2$ but $(1,2) \neq (2,1)$.\\
         Onto.
@@ -118,25 +119,101 @@
   \end{enumerate}
 
   \section{[UD] Problem 15.7}
+  \begin{enumerate}[(a)]
+    \item
+    \begin{enumerate}[(i)]
+      \item $f=\{(1,4),(2,5),(3,5)\}, \;\; g=\{(4,1),(5,2)\}$;
+      \item $f=\{(1,4),(2,5)\}, \;\; g=\{(4,1),(5,2)\}$;
+      \item Impossible.
+    \end{enumerate}
+    \begin{center}
+         \begin{tabular}{ccc}
+               \xymatrix@R=0.2cm{
+        \mathbf{B} \quad \ar[r]^{g} & \quad \mathbf{A} \quad \ar[r]^{f} & \quad \mathbf{B} \\
+        4 \quad \ar[r] & \quad 1 \quad \ar[r] & \quad 4 \\
+        5 \quad \ar[r] & \quad 2 \quad \ar[r] & \quad 5 \\
+         & \quad 3 \ar[ur]  \quad &    } &  \hspace{1cm} &  \xymatrix@R=0.2cm{
+        \mathbf{B} \quad \ar[r]^{g} & \quad \mathbf{A} \quad \ar[r]^{f} & \quad \mathbf{B} \\
+        4 \quad \ar[r] & \quad 1 \quad \ar[r] & \quad 4 \\
+        5 \quad \ar[r] & \quad 2 \quad \ar[r] & \quad 5 \\
+         &  \quad &    } \\
+           (i) &  &(ii) \\
+         \end{tabular} \par
+         Figure 1: diagrams of $A$ and $B$
+    \end{center}
+    \item Let $A=\{1,2\}$, $B=\{1\}$, $f=\{(1,1),(2,1)\}$, $g=\{(1,1)\}$, we have $f \circ g = \{(1,1)\} = i_B$, but $g \circ f = \{(1,1),(2,1)\} \neq i_A$. \par
+        Because neither $f$ nor $g$ is a bijective function.
+    \item Let $A=\{1\}$, $B=\{1,2\}$, $f=\{(1,1)\}$, $g=\{(1,1),(2,1)\}$, we have $g \circ f = \{(1,1)\} = i_A$, but $f \circ g = \{(1,1),(2,1)\} \neq i_B$. \par
+        Because neither $f$ nor $g$ is a bijective function.
+    \item $f$ is not always one-to-one, but must be onto. For injectivity, we have a counterexample in (b). For surjectivity, suppose to the contrary that $f$ is not onto.
+        That means, there exists $b \in B$, for all $a \in A$, $f(a) \neq b$. Therefore, $(f \circ g)(b) = f(g(b)) \neq b$, which is contradict to that $f \circ g = i_B$. Therefore $f$ is onto.
+    \item Guess whether the function has some property. If true, try to find the proof; if false, try to find a counterexample. \par
+        Here, $f$ is not always onto, but must be one-to-one. For surjectivity, we have a counterexample in (c). For injectivity, suppose to the contrary that $f$ is not one-to-one. That means, there exists $a$ and $b$ in $A$ such that $f(a)=f(b)$. However, $(g \circ f)(a)=g(f(a))=g(f(b))=(g \circ b)(b)$, which is contradict to that $g \circ f = i_A$. Therefore $f$ is one-to-one.
+  \end{enumerate}
 
   \section{[UD] Problem 15.11}
+  By the definition of the inverse of a function, the inverse function of $f$ exists because $f$ is a bijection. Since $f \circ g_1 = f \circ g_2$, we have $f^{-1} \circ (f \circ g_1) = f^{-1} \circ (f \circ g_2)$, thus $(f^{-1} \circ f) \circ g_1 = (f^{-1} \circ f) \circ g_2$ because the composition satisfies associative property, and by Theorem 15.4 (ii) we get $g_1 = g_2$.  \hfill $\square$ \par
+  If $g_1 \circ f = g_2 \circ f$ and $f$ is bijective, $g_1=g_2$ still holds. Just get $g_1 \circ (f \circ f^{-1}) = g_2 \circ (f \circ f^{-1})$, and prove in the similar way.
 
   \section{[UD] Problem 15.12}
+  Yes. \par
+  The equivalence class of $a \in A$ is $\{x: f(x)=f(a)\}$.
 
   \section{[UD] Problem 15.13}
+  No. \par
+  Yes. $f(x)=x$.
 
   \section{[UD] Problem 15.14}
+  \begin{enumerate}[(a)]
+    \item First, for all $(a,c) \in A \times C$, there exists a unique pair $(f(a),g(c)) \in B \times D$, such that $H(a,c) = (f(a),g(c))$ because $f: A \rightarrow B$ and $g:
+        C \rightarrow D$ are both functions. Therefore $H$ is a function. \par
+        Second, let $(f(a_1),g(c_1)) = (f(a_2),g(c_2))$, by the definition of ordered pair, we have $f(a_1) = f(a_2)$ and $g(c_1)=g(c_2)$, since $f$ and $g$ are both one-to-one, we get $a_1 = a_2$ and $c_1=c_2$, and this implies $(a_1,c_1)=(a_2,c_2)$. Therefore $H$ is one-to-one. \hfill $\square$
+    \item Since $f$ and $g$ are onto, for every $(b,d) \in B \times D$, there exist $a$ and $c$, such that $f(a)=b$ and $g(c)=d$, therefore $H(a,c)=(b,d)$. Hence $H$ is also onto. \hfill $\square$
+  \end{enumerate}
 
   \section{[UD] Problem 15.15}
-
+  $H$ is not a function: $A=\{1,2\}$, $B=\{1,2\}$, $C=\{2,3\}$, $D=\{3,4\}$, $f=\{(1,1),(2,2)\}$, $g=\{(2,3),(3,4)\}$, $H=\{(1,1),(2,2),(2,3),(3,4)\}$. \par
+  $H$ is a function: $A=\{1\}$, $B=\{1\}$, $C=\{2\}$, $D=\{2\}$, $f=\{(1,1)\}$, $g=\{(2,2)\}$, $H=\{(1,1),(2,2)\}$. \par
+  When $A$ and $C$ are disjoint, we are assured that $H$ is a function. In fact, $H$ is a function if and only if $f \cap [(A \cap C) \times B] = g \cap [(A \cap C) \times D]$.
+  
   \section{[UD] Problem 15.20}
+  \begin{enumerate}[(a)]
+    \item Let $f|_{A_1}(x)=f|_{A_1}(y)$, and by the definition of the restriction function, we have $f(x)=f(y)$. Since $f$ is one-to-one, we have $x=y$. Therefore $f|_{A_1}$ is one-to-one. \hfill $\square$
+    \item For every $y \in B$, there exists $x \in A_1 \subset A$ such that $f|_{A_1}(x)=f(x)=y$ because $f|_{A_1}$ is onto. Therefore $f$ is onto. \hfill $\square$
+  \end{enumerate}
 
   \section{[UD] Problem 16.19}
+  For every $a \in A$, there exists $b \in B$ such that $b = f(a)$ , and we have that $f^{-1}(\{b\}) \subseteq A$ because $f$ is a function from $A$ to $B$. Therefore, $\bigcup \limits_{b \in B} f^{-1}(\{b\}) = A$. \par
+  Since $f$ is onto, for every $b \in B$, there exists $a \in A$, such that $f(a)=b$, thus $f^{-1}(\{b\})$ is always nonempty. \par
+  If $f^{-1}(\{b_1\}) \cap f^{-1}(\{b_2\})$ is nonempty, there exists $a$, such that $f(a)=b_1$ and $f(a)=b_2$, thus $b_1=b_2$, therefore $f^{-1}(\{b_1\}) = f^{-1}(\{b_2\})$. \par
+  Summarizing, we conclude that $\{f^{-1}(\{b\}):b \in B\}$ is a partition of $A$. \hfill $\square$
 
   \section{[UD] Problem 16.20}
+  \begin{enumerate}[(a)]
+    \item No.
+    \item For every $a \in A_1$, we have $f(a) \in f(A_1) = f(A_2)$, thus there exists $a' \in A_2$ such that $f(a')=f(a)$. Since $f$ is \textbf{one-to-one}, we have that $a'=a$, therefore $a \in A_2$. Hence $A_1 \subseteq A_2$, and $A_2 \subseteq A_1$ likewise. Therefore $A_1=A_2$.  \hfill $\square$ \par
+        I used only one-to-one.
+  \end{enumerate}
 
   \section{[UD] Problem 16.21}
+  \begin{enumerate}[(a)]
+    \item No.
+    \item For every $b \in B_1 \subseteq Y$, there exists $a \in X$ such that $f(a)=b$ because $f$ is \textbf{onto}. Hence, $a$ is an element of $f^{-1}(B_1) = f^{-1}(B_2)$, therefore there exists $b' \in B_2$ such that $f(a)=b'$, thus $b=b'$, and $b$ is an element of $B_2$. Therefore $B_1$ is a subset of $B_2$, and $B_2$ is a subset of $B_1$ likewise. So $B_1=B_2$. \hfill $\square$ \par
+        I used only onto.
+  \end{enumerate}
 
   \section{[UD] Problem 16.22}
-
+  \begin{enumerate}[(a)]
+    \item Yes.
+    \item For all $x \in A_1 \cap A_2$, both $\chi_{A_1}(x)$ and $\chi_{A_2}(x) = 1$, therefore $\chi_{A_1 \cap A_2}(x)= \chi_{A_1}(x) \cdot \chi_{A_2}(x) = 1$. \par
+         For all $x \notin A_1 \cap A_2$, either $\chi_{A_1}(x)$ or $\chi_{A_2}(x) = 0$, therefore $\chi_{A_1 \cap A_2}(x)= \chi_{A_1}(x) \cdot \chi_{A_2}(x) = 0$. \par
+         Summarizing, we have $\chi_{A_1} \cdot \chi_{A_2} = \chi_{A_1 \cap A_2}$. \hfill $\square$ 
+    \item For all $x$ s.t. $x \in A_1$ and $x \in A_2$, $\chi_{A_1}(x) = \chi_{A_2}(x) = 1$, $\chi_{A_1 \cap A_2}(x) = 1$, therefore $\chi_{A_1 \cup A_2}(x)= \chi_{A_1}(x) + \chi_{A_2}(x) - \chi_{A_1 \cap A_2}(x) = 1$ \par
+        For all $x$ s.t. $x \in A_1$ and $x \notin A_2$, $\chi_{A_1}(x) = 1$,$\chi_{A_2}(x) = 0$, $\chi_{A_1 \cap A_2}(x) = 0$, therefore $\chi_{A_1 \cup A_2}(x)= \chi_{A_1}(x) + \chi_{A_2}(x) - \chi_{A_1 \cap A_2}(x) = 1$ \par
+        For all $x$ s.t. $x \notin A_1$ and $x \in A_2$, $\chi_{A_1 \cup A_2}(x)= \chi_{A_1}(x) + \chi_{A_2}(x) - \chi_{A_1 \cap A_2}(x) = 1$ holds likewise. \par
+        For all $x$ s.t. $x \notin A_1$ and $x \notin A_2$, $\chi_{A_1}(x) = \chi_{A_2}(x) = 0$, $\chi_{A_1 \cap A_2}(x) = 0$, therefore $\chi_{A_1 \cup A_2}(x)= \chi_{A_1}(x) + \chi_{A_2}(x) - \chi_{A_1 \cap A_2}(x) = 0$ \par
+        Summarizing, we have $\chi_{A_1 \cup A_2} = \chi_{A_1} + \chi_{A_2} - \chi_{A_1 \cap A_2}$. \hfill $\square$ 
+    \item $\chi_{X ~\backslash~ A_1} = 1 - \chi_{A_1}$.
+  \end{enumerate}
+  
 \end{document}
