@@ -44,8 +44,7 @@
       ---- \= ---- \= ---- \= ---- \kill
       $S \leftarrow 0$; \\
       for $i$ going from 1 to $N$ do the following: \\
-       \> if $A[i,1]>A[A[i,2],1]$ then do the following: \\
-       \>  \> $S \leftarrow S+A[i,1]$;  \\
+       \> if $A$[$i,1$]$>A$[$A$[$i,2$]$,1$]$$ then $S \leftarrow S+A$[$i,1$]$$;  \\
       output $S$.
     \end{tabbing}
     \item Suppose the root of the binary tree is $R$.
@@ -54,13 +53,11 @@
       $S \leftarrow 0$; \\
       $P \leftarrow R$; \\
       $N \leftarrow$ the content of the first offspring of $R$; \\
-      if the content of $R$ $>$ \textbf{get the salary of $N$th employee} do the following: \\
-       \> $S \leftarrow S$ + the content of $R$;\\
+      if the content of $R$ $>$ \textbf{get the salary of $N$th employee} then $S \leftarrow S$ + the content of $R$;\\
       while $P$ has a second offspring do the following: \\
        \> $P \leftarrow$ the second offspring of $P$; \\
        \> $N \leftarrow$ the content of the first offspring of $S$; \\
-       \> if the content of $P$ $>$ \textbf{get the salary of $N$th employee} do the following: \\
-       \> \> $S \leftarrow S$ + the content of $P$;\\
+       \> if the content of $P$ $>$ \textbf{get the salary of $N$th employee} then $S \leftarrow S$ + the content of $P$;\\
       output $S$.\\
       \\
       subroutine \textbf{get the salary of $N$th employee} \\
@@ -219,18 +216,17 @@
       ---- \= ---- \= ---- \= ---- \kill
       $M_1 \leftarrow $ \textbf{find maximum of first $N$ elements}; \\
       $I \leftarrow 1$; \\
-      do the following while $V[I] \neq M_1$: \\
+      do the following while $V$[$I$]$ \neq M_1$: \\
        \> $I \leftarrow I + 1$; \\
       for $I$ going from $I$ to $N-1$ do the following: \\
-       \> $V[I] \leftarrow V[I+1]$; \\
+       \> $V$[$I$]$ \leftarrow V$[$I+1$]; \\
       $M_2 \leftarrow $ \textbf{find maximum of first $N-1$ elements}; \\
       output $M_1$, $M_2$. \\
       \\
       subroutine \textbf{find maximum of first $n$ elements}\\
-       \> $A \leftarrow V[1]$; \\
+       \> $A \leftarrow V$[$1$]; \\
        \> for $i$ going from 2 to $n$ do the following: \\
-       \> \> if $V[i] > A$ do the following: \\
-       \> \> \> $A \leftarrow V[i]$; \\
+       \> \> if $V$[$i$]$ > A$ then $A \leftarrow V$[$i$]; \\
        \> return $A$.
     \end{tabbing}
     \item
@@ -238,23 +234,20 @@
       ---- \= ---- \= ---- \= ---- \kill
       $M_1 \leftarrow $ \textbf{find maximum from $1$th to $N$th element}; \\
       $I \leftarrow 1$; \\
-      do the following while $V[I] \neq M_1$: \\
+      do the following while $V$[$I$]$ \neq M_1$: \\
        \> $I \leftarrow I + 1$; \\
       for $I$ going from $I$ to $N-1$ do the following: \\
-       \> $V[I] \leftarrow V[I+1]$; \\
+       \> $V$[$I$]$ \leftarrow V$[$I+1$]; \\
       $M_2 \leftarrow $ \textbf{find maximum from $1$th to $(N-1)$th element}; \\
       output $M_1$, $M_2$. \\
       \\
       subroutine \textbf{find maximum from $m$th to $n$th element}; \\
-       \> if $m = n$ then do the following: \\
-       \> \> return $V[m]$; \\
+       \> if $m = n$ then then return $V$[$m$]; \\
        \> $p \leftarrow \lfloor (m+n)/2 \rfloor$; \\
        \> $T_1 \leftarrow $ \textbf{find maximum from $m$th to $p$th element}; \\
        \> $T_2 \leftarrow $ \textbf{find maximum from $(p+1)$th to $n$th element}; \\
-       \> if $T_1 > T_2$ do the following: \\
-       \> \> return $T_1$; \\
-       \> otherwise do the following: \\
-       \> \> return $T_2$. \\
+       \> if $T_1 > T_2$ then return $T_1$; \\
+       \> otherwise return $T_2$. \\
     \end{tabbing}
   \end{enumerate}
 
@@ -266,31 +259,29 @@
       $m \leftarrow 0$; \\
       $i \leftarrow 1$; \\
       while $m < M-1$ do the following: \\
-       \> if \textbf{find} $V[i]$.first $\neq$ \textbf{find} $V[i]$.second then do the following: \\
-       \> \> call \textbf{union $V[i]$}.first \textbf{and $y$}.first; \\
-       \> \> output $V[i]$; \\
+       \> if \textbf{find} $V$[$i$].first $\neq$ \textbf{find} $V$[$i$].second then do the following: \\
+       \> \> call \textbf{union $V$[$i$]}.first \textbf{and $y$}.first; \\
+       \> \> output $V$[$i$]; \\
        \> \> $m \leftarrow m + 1$; \\
        \> $i \leftarrow i+1$. \\
       \\
       subroutine \textbf{initialize} \\
        \> for $i$ going from 1 to $N$ do the following: \\
-       \> \> $U[i]=i$; \\
+       \> \> $U$[$i$]$=i$; \\
       \\
       subroutine \textbf{find $x$} \\
-       \> if $U[x]=x$ then do the following: \\
-       \> \> return $x$; \\
-       \> $t \leftarrow$ \textbf{find $U[x]$}; \\
-       \> $U[x] \leftarrow t$; \\
+       \> if $U$[$x$]$=x$ then return $x$; \\
+       \> $t \leftarrow$ \textbf{find $U$[$x$]}; \\
+       \> $U$[$x$]$ \leftarrow t$; \\
        \> return $t$. \\
       \\
       subroutine \textbf{union $x$ and $y$} \\
        \> $p \leftarrow$ \textbf{find $x$}; \\
        \> $q \leftarrow$ \textbf{find $y$}; \\
-       \> $U[p] \leftarrow q$. \\
+       \> $U$[$p$]$ \leftarrow q$. \\
       \\
       subroutine \textbf{quicksort from $a$ to $b$} \\
-       \> if $a \geq b$ then do the following: \\
-       \> \> return; \\
+       \> if $a \geq b$ then return; \\
        \> $p \leftarrow$ \textbf{partition from $a$ to $b$}; \\
        \> call \textbf{quicksort from $a$ to $p-1$}; \\
        \> call \textbf{quicksort from $p+1$ to $b$}. \\
@@ -299,16 +290,16 @@
        \> call \textbf{swap $\lfloor (a+b)/2 \rfloor$ and $L$}; \\
        \> $L \leftarrow a$; \\
        \> for $i$ going from $a$ to $b-1$ do the following: \\
-       \> \> if $V[i]$.length $<$ $V[b]$.length do the following: \\
+       \> \> if $V$[$i$].length $<$ $V$[$b$].length do the following: \\
        \> \> \> call \textbf{swap $i$ and $L$}; \\
        \> \> \> $L \leftarrow L + 1$; \\
        \> call \textbf{swap $b$ and $L$}; \\
        \> return $L$. \\
       \\
       subroutine \textbf{swap $a$ and $b$} \\
-       \> $t \leftarrow V[a]$; \\
-       \> $V[a] \leftarrow V[b]$; \\
-       \> $V[b] \leftarrow t$; \\
+       \> $t \leftarrow V$[$a$]; \\
+       \> $V$[$a$]$ \leftarrow V$[$b$]; \\
+       \> $V$[$b$]$ \leftarrow t$; \\
        \> return.
     \end{tabbing}
 
@@ -318,18 +309,18 @@
     \begin{tabbing}
       ---- \= ---- \= ---- \= ---- \= ---- \= ---- \kill
       for $i$ going from 0 to $C$ do the following: \\
-       \> $R[i] \leftarrow 0$; \\
+       \> $R$[$i$]$ \leftarrow 0$; \\
        \> for $j$ going from 1 to $N$ do the following: \\
-       \> \> $S[i][j] = 0$; \\
+       \> \> $S$[$i$][$j$]$ = 0$; \\
       for $i$ going from 1 to $N$ do the following: \\
-       \> for $j$ going from 1 to $Q[i]$ do the following: \\
-       \> \> for $k$ going down from $C$ to $W[i]$ do the following: \\
-       \> \> \> if $R[j-W[i]]+P[i] > R[j]$ do the following: \\
-       \> \> \> \> $R[j] \leftarrow R[j-W[i]]+P[i]$; \\
+       \> for $j$ going from 1 to $Q$[$i$] do the following: \\
+       \> \> for $k$ going down from $C$ to $W$[$i$] do the following: \\
+       \> \> \> if $R$[$j-W$[$i$]]$+P$[$i$]$ > R$[$j$] do the following: \\
+       \> \> \> \> $R$[$j$]$ \leftarrow R$[$j-W$[$i$]]$+P$[$i$]; \\
        \> \> \> \> for $l$ going from 1 to $i$ do the following: \\
-       \> \> \> \> \> $S[j][l] \leftarrow S[j-W[i]][l]$; \\
-       \> \> \> \> $S[j][i] \leftarrow S[j][i] + 1 $; \\
-      output $S[C]$. 
+       \> \> \> \> \> $S$[$j$][$l$]$ \leftarrow S$[$j-W$[$i$]][$l$]; \\
+       \> \> \> \> $S$[$j$][$i$]$ \leftarrow S$[$j$][$i$]$ + 1 $; \\
+      output $S$[$C$].
     \end{tabbing}
     \item The output is [0, 1, 3, 2, 1]. The total profit of the knapsack is 194.
   \end{enumerate}
@@ -341,24 +332,23 @@
       ---- \= ---- \= ---- \= ---- \kill
       while $C \neq 0$ do the following: \\
       $t \leftarrow $ \textbf{find best material}; \\
-      if $W[t] \times Q[t] < C$ then do the following: \\
-       \> $C \leftarrow C - W[t] \times Q[t]$; \\
-       \> $Q[t] \leftarrow 0$; \\
-       \> $S[t] \leftarrow Q[t]$; \\
+      if $W$[$t$]$ \times Q$[$t$]$ < C$ then do the following: \\
+       \> $C \leftarrow C - W$[$t$]$ \times Q$[$t$]; \\
+       \> $Q$[$t$]$ \leftarrow 0$; \\
+       \> $S$[$t$]$ \leftarrow Q$[$t$]; \\
       otherwise do the following: \\
-       \> $Q[t] \leftarrow Q[t] - C/W[t]$; \\
-       \> $S[t] \leftarrow C/W[t]$; \\
+       \> $Q$[$t$]$ \leftarrow Q$[$t$]$ - C/W$[$t$]; \\
+       \> $S$[$t$]$ \leftarrow C/W$[$t$]; \\
        \> $C \leftarrow 0$; \\
       output $S$. \\
       \\
       subroutine \textbf{find best material} \\
        \> $i \leftarrow 1$; \\
-       \> while $Q[i] = 0$ do the following: \\
+       \> while $Q$[$i$]$ = 0$ do the following: \\
        \> \> $i \leftarrow i+1$; \\
        \> $t \leftarrow i$; \\
        \> for $i$ going from $i+1$ to $N$ do the following: \\
-       \> \> if $Q[i] > 0$ and $P[i]/W[i] > P[t]/W[t]$ then do the following: \\
-       \> \> \> $t \leftarrow i$;\\
+       \> \> if $Q$[$i$]$ > 0$ and $P$[$i$]$/W$[$i$]$ > P$[$t$]$/W$[$t$] then $t \leftarrow i$;\\
        \> return $t$.
     \end{tabbing}
     \item The output is [0, 1, 1.8, 5, 1]. The total profit of the knapsack is 200.
