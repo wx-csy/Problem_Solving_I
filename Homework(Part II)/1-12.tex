@@ -85,14 +85,14 @@
 
   \section{[DH] Problem 5.12}
   \begin{enumerate}[(a)]
-    \item 正确。定义~\textbf{left($S$, $i$)}~为字符串~$S$~最开始的~$i$~ 个字符构成的字符串，\textbf{right($S$, $i$)}~为字符串~$S$~ 最后的~$i$~个字符构成的字符串，\textbf{len($S$)}~为字符串~$S$~ 中字符的个数。在每次执行循环前，断言“\textbf{left($S$, $i$)}$=$\textbf{rev(right($S$, $i$))}，其中~$i$~为语句`$X\leftarrow$\textbf{all-but-last(tail($X$))}'执行的次数”。在第一次循环执行之前，断言显然是成立的。当循环执行了一次之后，如果该次循环执行时~\textbf{eq(head($X$), last($X$))}~ 成立，那么对该次循环执行之前的~$X$~（记为~$X'$），有    ~\textbf{left($S\cdot$head($X'$),$i$)}$=$\textbf{rev(right($S\cdot$tail($X'$), $i$))}，因此断言依然成立；反之，断言未发生变化，依然是成立的。当循环结束后，根据断言有~\textbf{left($S$, $\lceil$len($S$)$/2\rceil$)}$=$\textbf{rev(right($S$, $\lceil$len($S$)$/2\rceil$))}，从而有~$S = $\textbf{rev($S$)}。在这种情况下，循环时~\textbf{eq(head($X$), last($X$))}~总是成立的，因而输出总是~true，这是正确答案。
+    \item 正确。定义~\textbf{left($S$, $i$)}~为字符串~$S$~最开始的~$i$~ 个字符构成的字符串，\textbf{right($S$, $i$)}~为字符串~$S$~ 最后的~$i$~个字符构成的字符串，\textbf{len($S$)}~为字符串~$S$~ 中字符的个数。在每次执行循环前，断言“\textbf{left($S$, $i$)}$=$\textbf{rev(right($S$, $i$))}，其中~$i$~为语句`$X\leftarrow$ \textbf{all-but-last(tail($X$))}'执行的次数”。在第一次循环执行之前，断言显然是成立的。当循环执行了一次之后，如果该次循环执行时~\textbf{eq(head($X$), last($X$))}~ 成立，那么对该次循环执行之前的~$X$~（记为~$X'$），有    ~\textbf{left($S\cdot$head($X'$),$i$)}$=$\textbf{rev(right($S\cdot$tail($X'$), $i$))}，因此断言依然成立；反之，断言未发生变化，依然是成立的。当循环结束后，根据断言有~\textbf{left($S$, $\lceil$len($S$)$/2\rceil$)}$=$\textbf{rev(right($S$, $\lceil$len($S$)$/2\rceil$))}，从而有~$S = $\textbf{rev($S$)}。在这种情况下，循环时~\textbf{eq(head($X$), last($X$))}~总是成立的，因而输出总是~true，这是正确答案。
     \item 错误。对于输入~\texttt{"ab"}，每次执行循环时，\textbf{eq(head($X$), last($X$))}~总不成立，因而 ~$X$~的长度不会发生变化，循环不会终止。
   \end{enumerate}
 
   \section{[DH] Problem 5.13}
   \begin{enumerate}[(a)]
     \item 不正确。对于输入~\texttt{"a"}，第一次执行循环时，$X=$``a''，$Y=\Lambda$，\textbf{eq(head($X$), last($Y$))}~ 不成立，循环结束，输出~false. 但是~\texttt{"a"}~是一个回文串。
-    \item 正确。每次执行循环后，如果~\textbf{eq(head($X$), last($Y$))}~成立，$X$~的长度减少，循环继续执行；否则推出循环。对于合法的输入，字符串~$X$~的长度总是有限的，因而算法总是能够结束。
+    \item 正确。每次执行循环后，如果~\textbf{eq(head($X$), last($Y$))}~成立，$X$~的长度减少，循环继续执行；否则退出推出循环。对于合法的输入，字符串~$X$~的长度总是有限的，因而算法总是能够结束。
   \end{enumerate}
 
   \section{[DH] Problem 5.14}
@@ -107,10 +107,10 @@
        \> otherwise $E \leftarrow $ false; \\
       return $E$.
     \end{tabbing}
-    \item 部分正确性的证明：在每次执行循环前，断言“如果~$E$~为~true，那么~\textbf{left($S$, $i$)}$=$\textbf{rev(right($S$, $i$))}，其中~$i$~为语句`$X\leftarrow$\textbf{all-but-last(tail($X$))}'执行的次数；否则~$S$~不是回文串”。在第一次循环执行之前，可以验证断言成立；在循环被执行了一次之后，如果该次循环执行时~\textbf{eq(head($X$), last($X$))}~ 成立，那么对该次循环执行之前的~$X$~（记为~$X'$），有    ~\textbf{left($S\cdot$head($X'$),$i$)}$=$\textbf{rev(right($S\cdot$tail($X'$), $i$))}，因此断言依然成立；否则，即可判定~$S$~不是回文串，断言也成立，并且下一次循环不会被执行。当循环结束后，根据断言，当~$E$~为~true~时有~\textbf{left($S$, $\lceil$len($S$)$/2\rceil$)}$=$\textbf{rev(right($S$, $\lceil$len($S$)$/2\rceil$))}，从而有~$S = $\textbf{rev($S$)}，即~$S$~是回文串；当~$E$~为~false~时~$S$~不是回文串，因此算法能够给出正确的输出。 \par
-        可终止性的证明：每次执行循环后，如果~\textbf{eq(head($X$), last($Y$))}~成立，$X$~的长度减少，循环继续执行；否则推出循环。对于合法的输入，字符串~$X$~的长度总是有限的，因而算法是可终止的。 \par
+    \item 部分正确性的证明：在每次执行循环前，断言“如果~$E$~为~true，那么~\textbf{left($S$, $i$)}$=$\textbf{rev(right($S$, $i$))}，其中~$i$~为语句`$X\leftarrow$ \textbf{all-but-last(tail($X$))}'执行的次数；否则~$S$~不是回文串”。在第一次循环执行之前，可以验证断言成立；在循环被执行了一次之后，如果该次循环执行时~\textbf{eq(head($X$), last($X$))}~ 成立，那么对该次循环执行之前的~$X$~（记为~$X'$），有    ~\textbf{left($S\cdot$head($X'$),$i$)}$=$\textbf{rev(right($S\cdot$tail($X'$), $i$))}，因此断言依然成立；否则，即可判定~$S$~不是回文串，断言也成立，并且下一次循环不会被执行。当循环结束后，根据断言，当~$E$~为~true~时有~\textbf{left($S$, $\lceil$len($S$)$/2\rceil$)}$=$\textbf{rev(right($S$, $\lceil$len($S$)$/2\rceil$))}，从而有~$S = $\textbf{rev($S$)}，即~$S$~是回文串；当~$E$~为~false~时~$S$~不是回文串，因此算法能够给出正确的输出。 \par
+        可终止性的证明：每次执行循环后，如果~\textbf{eq(head($X$), last($Y$))}~成立，$X$~的长度减少，循环继续执行；否则退出循环。对于合法的输入，字符串~$X$~的长度总是有限的，因而算法是可终止的。 \par
         综上，该算法是完全正确的。
     \item 使用~$Pal1$~算法判断时，需要将整个字符串反转后再和原字符串比较，消耗的时间和字符串的长度成正比；而使用~$Pal4$~算法判断时，只需判断首尾两个字符即可断定字符串不是回文串，而无需继续比较，因此效率较高。
   \end{enumerate}
-   
+
 \end{document}
