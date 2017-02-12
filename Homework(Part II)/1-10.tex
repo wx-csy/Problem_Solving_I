@@ -21,7 +21,7 @@
   \section{[UD] Problem 13.3}
   \begin{enumerate}[(a)]
     \item No. Because both $(1,\sqrt{3})$ and $(1,-\sqrt{3})$ are elements of $f$, however, $\sqrt{3} \neq -\sqrt{3}$.
-    \item No. Because for $x=0$, there does not exist $y \in \mathbb{R}$, such that $y=1/(x+1)$.
+    \item No. Because for $x=-1$, there does not exist $y \in \mathbb{R}$, such that $y=1/(x+1)$.
     \item Yes. Because for all $(x,y) \in \mathbb{R}^2$, there exists a unique real number $z$ such that $z = x + y$.
     \item Yes. Because for every closed interval of real numbers $[a,b]$, there exists a unique real number $a$, such that $([a,b],a) \in f$.
     \item Yes. Because for every $(n,m) \in \mathbb{N} \times \mathbb{N}$, there exists a unique real number $m$, such that $((n,m),m) \in f$.
@@ -48,7 +48,7 @@
   No. For every $x \in A$, there may not exist $y$ such that $(x,y) \in f$. Even though for every $x \in A$ there exists $y$ such that $(x,y) \in f$, we cannot make sure that there only exists one $y$ such that $(x,y) \in f$.
 
   \section{[UD] Problem 13.13}
-  The only relation is $\{(x,y) \in X^2:x=y\}$. By the reflexion of the equivalence, any relation on $X$ is superset of $\{(x,y) \in X^2:x=y\}$. Assume there exists relation $X'$ such that $X' ~\backslash~ X \neq \varnothing$, let $(a,b)$ be an element of $X'$ such that $a \neq b$. However, $(b,b)$ is an element of $X'$ but $a \neq b$, so $X'$ is not a function.
+  The only possible relation is $\{(x,y) \in X^2:x=y\}$. By the reflexion of the equivalence, any relation on $X$ is a superset of $\{(x,y) \in X^2:x=y\}$. Assume there exists relation $X'$ such that $X' ~\backslash~ X \neq \varnothing$, let $(a,b)$ be an element of $X'$ such that $a \neq b$. However, $(b,b)$ is an element of $X'$ but $a \neq b$, so $X'$ is not a function.
 
   \section{[UD] Problem 14.8}
   \begin{enumerate}[(a)]
@@ -67,7 +67,7 @@
     \item One-to-one.\\
     Onto.
     \item Not one-to-one. $f(X)=f(B)=B$ but $X \neq B$. \\
-      Not onto. The range is $\mathcal{P}(X ~\backslash~ B)$.
+      Not onto. The range is $\mathcal{P}(B)$.
     \item One-to-one.\\
       Not onto. The range is $(0,+\infty)$.
   \end{enumerate}
@@ -97,7 +97,7 @@
     \hline
     (a) & $1/(1+x^2)$ & $\mathbb{R}$ & $(0,1]$ & $1/(1+x)^2$ & $\mathbb{R} ~\backslash~ \{-1\}$ & $\mathbb{R}^+$ \\
     \hline
-    (b) & $x$ & $\mathbb{R}^+$ & $\mathbb{R}^+$ & $|x|$ & $\mathbb{R}$ & $[0,+\infty)$ \\
+    (b) & $x$ & $[0,+\infty)$ & $[0,+\infty)$ & $|x|$ & $\mathbb{R}$ & $[0,+\infty)$ \\
     \hline
     (c) & $1/(x^2+1)$ & $\mathbb{R}$ & $(0,1]$ & $(1/x^2)+1$ & $\mathbb{R} ~\backslash~ \{0\}$ & $(1,+\infty)$  \\
     \hline
@@ -110,11 +110,11 @@
     \item $ (f \circ g) (x) = f(g(x))
       = \dfrac{\dfrac{3+2x}{1-x}-3}{\dfrac{3+2x}{1-x}+2}
       = \dfrac{\dfrac{5x}{1-x}}{\dfrac{5}{1-x}}
-      = x $, \\ [0.2cm]
+      = x $ ($x \neq 1$), \\ [0.2cm]
       $ (g \circ f) (x) = g(f(x))
       = \dfrac{3+2\dfrac{x-3}{x+2}}{1-\dfrac{x-3}{x+2}}
       = \dfrac{\dfrac{5x}{x+2}}{\dfrac{5}{x+2}}
-      = x $.
+      = x $ ($x \neq -2$).
     \item (Theorem 15.4) Let $f: A \rightarrow B$ be a bijective function, and $f^{-1}$ be the inverse of $f$, then $ f \circ g  = i_B$, and $ g \circ f  = i_A$.
   \end{enumerate}
 
@@ -152,12 +152,12 @@
   \end{enumerate}
 
   \section{[UD] Problem 15.11}
-  By the definition of the inverse of a function, the inverse function of $f$ exists because $f$ is a bijection. Since $f \circ g_1 = f \circ g_2$, we have $f^{-1} \circ (f \circ g_1) = f^{-1} \circ (f \circ g_2)$, thus $(f^{-1} \circ f) \circ g_1 = (f^{-1} \circ f) \circ g_2$ because the composition satisfies associative property, and by Theorem 15.4 (ii) we get $g_1 = g_2$.  \hfill $\square$ \par
+  By the definition of the inverse of a function, the inverse function of $f$ exists because $f$ is a bijection. Since $f \circ g_1 = f \circ g_2$, we have $f^{-1} \circ (f \circ g_1) = f^{-1} \circ (f \circ g_2)$, thus $(f^{-1} \circ f) \circ g_1 = (f^{-1} \circ f) \circ g_2$ by associative property, and by Theorem 15.4 (ii) we get $g_1 = g_2$.  \hfill $\square$ \par
   If $g_1 \circ f = g_2 \circ f$ and $f$ is bijective, $g_1=g_2$ still holds. Just get $g_1 \circ (f \circ f^{-1}) = g_2 \circ (f \circ f^{-1})$, and prove in the similar way.
 
   \section{[UD] Problem 15.12}
   Yes. \par
-  The equivalence class of $a \in A$ is $\{x: f(x)=f(a)\}$.
+  The equivalence class of $a \in A$ is $\{a\}$.
 
   \section{[UD] Problem 15.13}
   No. \par

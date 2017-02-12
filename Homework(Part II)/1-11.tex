@@ -64,7 +64,6 @@
       $T \leftarrow R$; \\
       do the following $N-1$ times: \\
        \> $T \leftarrow$ the second offspring of $T$; \\
-      $T \leftarrow$ the second offspring of $T$; \\
       return the content of $T$; \\
     \end{tabbing}
   \end{enumerate}
@@ -254,7 +253,7 @@
   \end{enumerate}
 
   \section{[DH] Problem 4.12}
-  Suppose there are $M$ nodes and $N$ edges in the graph, the nodes are numbered from 1 to $M$ and the edges are stored in vector $V$. Every edge T support three operations: get the number of the first node it connects(T.first), get the number of the second node it connects(T.second) and get the length of the node(T.length). Let $U$ be an empty vector of integers. The output is the edges forming the minimal spanning tree.
+  Suppose there are $M$ nodes and $N$ edges in the graph, the nodes are numbered from 1 to $M$ and the edges are stored in vector $V$. Every edge T support three operations: get the number of the first node it connects (T.first), get the number of the second node it connects (T.second) and get the length of the node (T.length). Let $U$ be an empty vector of integers. The output is the edges forming the minimal spanning tree.
     \begin{tabbing}
       ---- \= ---- \= ---- \= ---- \kill
       call \textbf{initialize}; \\
@@ -263,7 +262,7 @@
       $i \leftarrow 1$; \\
       while $m < M-1$ do the following: \\
        \> if \textbf{find} $V$[$i$].first $\neq$ \textbf{find} $V$[$i$].second then do the following: \\
-       \> \> call \textbf{union $V$[$i$]}.first \textbf{and $y$}.first; \\
+       \> \> call \textbf{union} $V$[$i$].first \textbf{and} $y$.first; \\
        \> \> output $V$[$i$]; \\
        \> \> $m \leftarrow m + 1$; \\
        \> $i \leftarrow i+1$. \\
@@ -274,7 +273,7 @@
       \\
       subroutine \textbf{find $x$} \\
        \> if $U$[$x$]$=x$ then return $x$; \\
-       \> $t \leftarrow$ \textbf{find $U$[$x$]}; \\
+       \> $t \leftarrow$ \textbf{find} $U$[$x$]; \\
        \> $U$[$x$]$ \leftarrow t$; \\
        \> return $t$. \\
       \\
@@ -290,7 +289,7 @@
        \> call \textbf{quicksort from $p+1$ to $b$}. \\
       \\
       subroutine \textbf{partition from $a$ to $b$} \\
-       \> call \textbf{swap $\lfloor (a+b)/2 \rfloor$ and $L$}; \\
+       \> call \textbf{swap $\lfloor (a+b)/2 \rfloor$ and $b$}; \\
        \> $L \leftarrow a$; \\
        \> for $i$ going from $a$ to $b-1$ do the following: \\
        \> \> if $V$[$i$].length $<$ $V$[$b$].length do the following: \\

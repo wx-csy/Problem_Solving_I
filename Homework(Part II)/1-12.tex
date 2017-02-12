@@ -91,7 +91,7 @@
 
   \section{[DH] Problem 5.13}
   \begin{enumerate}[(a)]
-    \item 不正确。对于输入~\texttt{"a"}，第一次执行循环时，$X=$``a''，$Y=\Lambda$，\textbf{eq(head($X$), last($Y$))}~ 不成立，循环结束，输出~false. 但是~\texttt{"a"}~是一个回文串。
+    \item 错误。对于输入~\texttt{"a"}，第一次执行循环时，$X=$``a''，$Y=\Lambda$，\textbf{eq(head($X$), last($Y$))}~ 不成立，循环结束，输出~false. 但是~\texttt{"a"}~是一个回文串。
     \item 正确。每次执行循环后，如果~\textbf{eq(head($X$), last($Y$))}~成立，$X$~的长度减少，循环继续执行；否则退出推出循环。对于合法的输入，字符串~$X$~的长度总是有限的，因而算法总是能够结束。
   \end{enumerate}
 
