@@ -19,16 +19,16 @@
   \begin{itemize}
     \item $B ~\backslash~ A$;
     \item $(A \cup B) ~\backslash~ (A \cap B)$;
-    \item $A \cup B \cup C$;
+    \item $A \cap B \cap C$;
     \item $(B \cap C) ~\backslash~ A$;
-    \item $((A \cap B) \cup (A \cap C) \cup (B \cap C)) ~\backslash~ (A \cup B \cup C)$.
+    \item $((A \cap B) \cup (A \cap C) \cup (B \cap C)) ~\backslash~ (A \cap B \cap C)$.
   \end{itemize}
 
   \section{[UD] Problem 6.16}
   \begin{enumerate}[(a)]
     \item For every $n$ in $A$, $n = x^2$ where $x$ is an integer, therefore $n$ is an integer, i.e. $n \in B$, so $A \subseteq B$. \hfill $\square$
     \item For every $t$ in $A$, $t$ is a real number, there exists a real number $x=t/2$, such that $t=2x$, so $t \in B$. Therefore $A \subseteq B$. \hfill $\square$
-    \item For every point $(x,y)$ in $A$, we have $y=(5-3x)/2$, therefore $2y+3x=5$, which means that $(x,y)$ is also in $B$. So $A \subseteq B$. \hfill $\square$
+    \item For every point $(x,y)$ in $A$, we have $y=(5-3x)/2$, therefore $2y+3x=5$, which means that $(x,y)$ is also an element of $B$. So $A \subseteq B$. \hfill $\square$
   \end{enumerate}
 
   \section{[UD] Problem 6.17}
@@ -42,22 +42,22 @@
     \item For every $x$ in universe, by definition of complement, if $x \in A$, then $x \notin A^c$ and if $x \notin A^c$ then $x \in (A^c)^c$, therefore we have if $x \in A$, then $x \in (A^c)^c$, i.e. $A$ is a subset of $(A^c)^c$. $(A^c)^c$ is a subset of $A$ likewise. So $(A^c)^c=A$. \hfill $\square$
     \item For every $x$ in $A \cap (B \cup C)$, we have $x \in A$, and $x \in B$ or $C$, so $x \in A$ and $B$ or $x \in A$ and $C$, thus $A \cap (B \cup C)$ is a subset of $(A \cap B) \cup (A \cap C)$. For every $x$ in $(A \cap B) \cup (A \cap C)$, we have $x \in A$ and $B$ or $x \in A$ and $C$, so $x \in A$, and $x \in B$ or $C$, thus $(A \cap B) \cup (A \cap C)$ is a subset of $A \cap (B \cup C)$. So $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$. \hfill $\square$
     \item For every $x$ in $X ~\backslash~ (A \cap B)$, we have $x \in X$ and, $x \notin A$ or $x \notin B$, thus $x \in X$ and $x \notin A$, or $x \in X$ and $x \notin B$, therefore $X ~\backslash~ (A \cap B)$ is a subset of $(X ~\backslash~ A) \cup (X ~\backslash~ B)$. For every $x$ in $(X ~\backslash~ A) \cup (X ~\backslash~ B)$, we have $x \in X$ and $x \notin A$, or $x \in X$ and $x \notin B$, thus $x \in X$ and, $x \notin A$ or $x \notin B$, so $(X ~\backslash~ A) \cup (X ~\backslash~ B)$ is a subset of $X ~\backslash~ (A \cap B)$. Therefore $X ~\backslash~ (A \cap B) = (X ~\backslash~ A) \cup (X ~\backslash~ B)$. \hfill $\square$
-    \item Since $A, B$ are subsets of $X$, for every $x \in X$, if $x \in A$ then $x \in B$ and if $x \notin B$ then $x \notin A$ are equivalent, so $A \subseteq B$ if and only if $(X ~\backslash~ B) \subseteq (X ~\backslash~ A)$. \hfill $\square$
-    \item If $A \cap B = B$, then for every $x$, $x \in B$ and $x \in A$ and $B$ are equivalent, so $x \in B$ implies $x \in A$, i.e. $A$ is a subset of $B$. If $B \subseteq A$, for every $x$, $x \in B$ implies $x \in A$, thus $x \in B$ and $x \in A$ and $B$ are equivalent, so $A \cap B = B$. Therefore, $A \cap B = B$ if and only if $B \subseteq A$. \hfill $\square$
+    \item Since $A, B$ are subsets of $X$, for every $x \in X$, ``if $x \in A$ then $x \in B$'' and ``if $x \notin B$ then $x \notin A$'' are equivalent, so $A \subseteq B$ if and only if $(X ~\backslash~ B) \subseteq (X ~\backslash~ A)$. \hfill $\square$
+    \item If $A \cap B = B$, then for every $x$, ``$x \in B$'' and ``$x \in A$ and $B$'' are equivalent, so $x \in B$ implies $x \in A$, i.e. $A$ is a subset of $B$. If $B \subseteq A$, for every $x$, $x \in B$ implies $x \in A$, thus $x \in B$ and $x \in A$ and $B$ are equivalent, so $A \cap B = B$. Therefore, $A \cap B = B$ if and only if $B \subseteq A$. \hfill $\square$
   \end{enumerate}
 
   \section{[UD] Problem 7.8}
   \begin{enumerate}[(a)]
     \item (ii);
     \item (i), (ii), (iii), (iv), (v);
-    \item For every $x$ in $(A \cap B)~\backslash~ C$, we have $x \in A$ and $B$ and $x \notin C$, so $x \in A$ and $x \notin C$, and $x \in B$ and $x \notin C$, thus $(A \cap B)~\backslash~ C$ is a subset of $(A~\backslash~ C) \cap ( B~\backslash~ C)$. Likewise $(A~\backslash~ C) \cap ( B~\backslash~ C)$ is a subset of $(A \cap B)~\backslash~ C$. Therefore $(A \cap B)~\backslash~ C = (A~\backslash~ C) \cap ( B~\backslash~ C)$. \hfill $\square$
+    \item For every $x$ in $(A \cap B)~\backslash~ C$, we have $x \in A, B$ and $x \notin C$, so $x \in A$ and $x \notin C$, and $x \in B$ and $x \notin C$, thus $(A \cap B)~\backslash~ C$ is a subset of $(A~\backslash~ C) \cap ( B~\backslash~ C)$. Likewise $(A~\backslash~ C) \cap ( B~\backslash~ C)$ is a subset of $(A \cap B)~\backslash~ C$. Therefore $(A \cap B)~\backslash~ C = (A~\backslash~ C) \cap ( B~\backslash~ C)$. \hfill $\square$
 
   \end{enumerate}
 
   \section{[UD] Problem 7.9}
   \begin{enumerate}[(a)]
     \item For every $x$ in $A ~\backslash~ B$, we have $x \in A$ and $x \notin B$, so $A~\backslash~B$ and $B$ are disjoint. \hfill $\square$
-    \item For every $x$ in $A \cup B$, we have $x \in A$ or $x \in B$, so $x \in A$, or $x \in B$ and $x \notin A$, therefore $A \cup B$ is a subset of $(A ~\backslash B) \cup B$. For every $x$ in $(A ~\backslash B) \cup B$, we have $x \in A$, or $x \in B$ and $x \notin A$, so $x \in A$ or $x \in B$, therefore $(A ~\backslash B) \cup B$ is a subset of $A \cup B$. So $A \cup B = (A ~\backslash B) \cup B$ \hfill $\square$
+    \item For every $x$ in $A \cup B$, we have $x \in A$ or $x \in B$, so $x \in A$, or $x \in B$ and $x \notin A$, therefore $A \cup B$ is a subset of $(A ~\backslash~ B) \cup B$. For every $x$ in $(A ~\backslash~ B) \cup B$, we have $x \in A$, or $x \in B$ and $x \notin A$, so $x \in A$ or $x \in B$, therefore $(A ~\backslash~ B) \cup B$ is a subset of $A \cup B$. So $A \cup B = (A ~\backslash~ B) \cup B$ \hfill $\square$
   \end{enumerate}
 
   \section{[UD] Problem 7.10}
@@ -85,27 +85,36 @@
   \section{[UD] Problem 8.7}
   \begin{enumerate}[(a)]
     \item Suppose, to the contrary, that $\displaystyle \bigcap_{\alpha \in I} A_\alpha \neq \varnothing$, then there exists $\displaystyle x \in \bigcap_{\alpha \in I} A_\alpha$, however, there exists $\alpha_0 \in I$ such that $A_{\alpha_0} = \varnothing$, so $x \in \varnothing$, which leads to a contradiction. Therefore $\displaystyle \bigcap_{\alpha \in I} A_\alpha = \varnothing$. \hfill $\square$
-    \item Let $X$ be the universe. For all $x$ in $X$, there exists $\alpha_0 \in I$, such that $A_{\alpha_0}=X$, so $\displaystyle x \in \bigcup_{\alpha \in I} A_\alpha = X$. \hfill $\square$
+    \item Let $X$ be the universe. For all $x$ in $X$, there exists $\alpha_0 \in I$, such that $A_{\alpha_0}=X$, thus $x \in X$, so $\displaystyle x \in \bigcup_{\alpha \in I} A_\alpha = X$. \hfill $\square$
     \item For all $x \in B$, for all $\alpha \in I$, we have $x \in A_\alpha$, so $\displaystyle x \in \bigcap_{\alpha \in I} A_\alpha$, therefore $\displaystyle B \subseteq \bigcap_{\alpha \in I} A_\alpha$.  \hfill $\square$
   \end{enumerate}
 
   \section{[UD] Problem 8.8}
   $A = \mathbb{Z}$. \par
-  Proof: for every integer $m$, there exists $n=|m|$ such that $m \notin \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, thus $\displaystyle n \notin \bigcap_{n \in \mathbb{Z}^+} \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, i.e. $m \in A$, so $\mathbb{Z}$ is a subset of $A$. For every $x$ in $A$, $\displaystyle x \notin \bigcap_{n \in \mathbb{Z}^+} \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, that is, there exists a positive integer $n$, such that $x \notin \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, i.e. $x \in \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, so $x \in \mathbb{Z}$, therefore $\mathbb{Z}$ is a subset of $A$. By the definition of equality of two sets, we get $\mathbb{Z} = A$. \hfill $\square$
+  Proof: for every integer $m$, there exists $n=|m|$ such that $m \notin \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, thus $\displaystyle m \notin \bigcap_{n \in \mathbb{Z}^+} \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, i.e. $m \in A$, so $\mathbb{Z}$ is a subset of $A$. For every $x$ in $A$, $\displaystyle x \notin \bigcap_{n \in \mathbb{Z}^+} \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, that is, there exists a positive integer $n$, such that $x \notin \mathbb{R} ~\backslash~ \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, i.e. $x \in \{-n,-n+1,\cdots,0,\cdots,n-1,n\}$, so $x \in \mathbb{Z}$, therefore $\mathbb{Z}$ is a subset of $A$. By the definition of equality of two sets, we get $\mathbb{Z} = A$. \hfill $\square$
 
   \section{[UD] Problem 8.9}
-  $A=\mathbb{Q} ~\backslash~ \{n: n \neq 2m, m\in \mathbb{Z}\}$. \par
-  Proof: for every real number $x$ in $\displaystyle \bigcap_{n \in \mathbb{Z}}(\mathbb{R}~\backslash~\{2n\})$, for every integer $n$, we have $x \notin \mathbb{R} ~\backslash~ \{2n\}$, so $\displaystyle \bigcap_{n \in \mathbb{Z}}(\mathbb{R}~\backslash~\{2n\})$ is a subset of $\{n: n \neq 2m, m\in \mathbb{Z}\}$. For every real number $x$ in $\{n: n \neq 2m, m\in \mathbb{Z}\}$, we have that for all integer $n$, $x \in \mathbb{R}~\backslash~\{2n\}$, so $\displaystyle x \in \bigcap_{n \in \mathbb{Z}}(\mathbb{R}~\backslash~\{2n\})$, therefore $\{n: n \neq 2m, m\in \mathbb{Z}\}$ is a subset of $\displaystyle x \in \bigcap_{n \in \mathbb{Z}}(\mathbb{R}~\backslash~\{2n\})$. By the definition of equality of two sets, we have $\displaystyle \{n: n \neq 2m, m\in \mathbb{Z}\} = \bigcap_{n \in \mathbb{Z}}(\mathbb{R}~\backslash~\{2n\})$, and this completes the proof. \hfill $\square$
+  $A= \{n: n = 2m, m \in \mathbb{Z}\}$. \par
+  Proof: let $\mathbb{R}$ be the universe, 
+  \begin{align*}
+    A &= \mathbb{Q} ~\backslash~ \bigcap_{n \in \mathbb{Z}}(\mathbb{R}~\backslash~\{2n\}) \\
+      &= \mathbb{Q} ~\backslash~ (\mathbb{R} ~\backslash~ \bigcup_{n \in \mathbb{Z}}\{2n\}) & \text{(By De Morgan's laws)} \\
+      &= \mathbb{Q} ~\backslash~ (\bigcup_{n \in \mathbb{Z}}\{2n\})^c & \text{(By the definition of complement)} \\
+      &= \mathbb{Q} ~\backslash~ (\{n: n=2m, m \in \mathbb{Z}\}) ^c \\
+      &= \mathbb{Q} \cap (\{n: n=2m, m \in \mathbb{Z}\} ^c ) ^c & \text{(By Theorem 7.4.17)} \\
+      &= \mathbb{Q} \cap \{n: n=2m, m \in \mathbb{Z}\} & \text{(By Theorem 7.4.2)} \\
+      &= \{n: n=2m, m \in \mathbb{Z}\}  & \square
+  \end{align*}
 
   \section{[UD] Problem 8.11}
   \begin{enumerate}[(a)]
-    \item $A_\alpha=\{\alpha\}$, $(I=\mathbb{Z})$;
+    \item $A_\alpha=\{\alpha\}$, $(\alpha \in \mathbb{Z})$;
     \item if $A_\alpha \neq A_\beta$, then $A_\alpha \cap A_\beta = \varnothing$;
     \item if $A_\alpha = A_\beta$, then $A_\alpha \cap A_\beta \neq \varnothing$;
     \item Yes.
     \item Yes.
-    \item Yes, except the trivial case: there is only zero or one element in $I$.
-    \item No. Here is a counterexample: $\{A_\alpha : A_\alpha = \{1,2,3\} ~\backslash~ \{\alpha\}, \alpha \in I\}$, $(I=\{1,2,3\})$.
+    \item This assertion holds if and only if there is more than one element in $I$.
+    \item No. Here is a counterexample: $\{A_\alpha : A_\alpha = \{1,2,3\} ~\backslash~ \{\alpha\}, \alpha \in I\}$ $(I=\{1,2,3\})$.
   \end{enumerate}
 
   \section{[UD] Problem 9.2}
@@ -123,7 +132,7 @@
   \section{[UD] Problem 9.12}
   \begin{enumerate}[(a)]
     \item The sufficiency is obvious, and we only have to prove the necessity. Assume, to the contrary, that $A \neq C$ or $B \neq D$. Without loss of generality, suppose $A \neq C$. Therefore, there exists $x$ such that $x \in A$ and $x \notin C$, or $x \notin A$ and $x \in C$. Suppose $x \in A$ and $x \notin C$ without loss of generality. Since $B$ is a nonempty set, there exists $y$ in $B$. Consider $(x,y)$, by the definition of Cartesian product, it is an element of $A \times B$, however it isn't an element of $C \times D$, because $x$ is not an element of $C$. Therefore, $A \times B = C \times D$ if and only if $A = C$ and $B = D$. \hfill $\square$
-    \item In the construction of $(x,y)$, we need to take an element $y$ in $B$, and this requires the sets are nonempty.
+    \item When constructing the pair $(x,y)$ (which leads to contradiction), we need to take an element $y$ in $B$, and this requires the sets are nonempty.
   \end{enumerate}
 
   \section{[UD] Problem 9.13}
