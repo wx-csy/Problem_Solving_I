@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage{ctex}
 \usepackage{enumerate}
 \usepackage{times}
@@ -175,7 +175,7 @@
   $H$ is not a function: $A=\{1,2\}$, $B=\{1,2\}$, $C=\{2,3\}$, $D=\{3,4\}$, $f=\{(1,1),(2,2)\}$, $g=\{(2,3),(3,4)\}$, $H=\{(1,1),(2,2),(2,3),(3,4)\}$. \par
   $H$ is a function: $A=\{1\}$, $B=\{1\}$, $C=\{2\}$, $D=\{2\}$, $f=\{(1,1)\}$, $g=\{(2,2)\}$, $H=\{(1,1),(2,2)\}$. \par
   When $A$ and $C$ are disjoint, we are assured that $H$ is a function. In fact, $H$ is a function if and only if $f \cap [(A \cap C) \times B] = g \cap [(A \cap C) \times D]$.
-  
+
   \section{[UD] Problem 15.20}
   \begin{enumerate}[(a)]
     \item Let $f|_{A_1}(x)=f|_{A_1}(y)$, and by the definition of the restriction function, we have $f(x)=f(y)$. Since $f$ is one-to-one, we have $x=y$. Therefore $f|_{A_1}$ is one-to-one. \hfill $\square$
@@ -207,13 +207,13 @@
     \item Yes.
     \item For all $x \in A_1 \cap A_2$, both $\chi_{A_1}(x)$ and $\chi_{A_2}(x) = 1$, therefore $\chi_{A_1 \cap A_2}(x)= \chi_{A_1}(x) \cdot \chi_{A_2}(x) = 1$. \par
          For all $x \notin A_1 \cap A_2$, either $\chi_{A_1}(x)$ or $\chi_{A_2}(x) = 0$, therefore $\chi_{A_1 \cap A_2}(x)= \chi_{A_1}(x) \cdot \chi_{A_2}(x) = 0$. \par
-         Summarizing, we have $\chi_{A_1} \cdot \chi_{A_2} = \chi_{A_1 \cap A_2}$. \hfill $\square$ 
+         Summarizing, we have $\chi_{A_1} \cdot \chi_{A_2} = \chi_{A_1 \cap A_2}$. \hfill $\square$
     \item For all $x$ s.t. $x \in A_1$ and $x \in A_2$, $\chi_{A_1}(x) = \chi_{A_2}(x) = 1$, $\chi_{A_1 \cap A_2}(x) = 1$, therefore $\chi_{A_1 \cup A_2}(x)= \chi_{A_1}(x) + \chi_{A_2}(x) - \chi_{A_1 \cap A_2}(x) = 1$ \par
         For all $x$ s.t. $x \in A_1$ and $x \notin A_2$, $\chi_{A_1}(x) = 1$,$\chi_{A_2}(x) = 0$, $\chi_{A_1 \cap A_2}(x) = 0$, therefore $\chi_{A_1 \cup A_2}(x)= \chi_{A_1}(x) + \chi_{A_2}(x) - \chi_{A_1 \cap A_2}(x) = 1$ \par
         For all $x$ s.t. $x \notin A_1$ and $x \in A_2$, $\chi_{A_1 \cup A_2}(x)= \chi_{A_1}(x) + \chi_{A_2}(x) - \chi_{A_1 \cap A_2}(x) = 1$ holds likewise. \par
         For all $x$ s.t. $x \notin A_1$ and $x \notin A_2$, $\chi_{A_1}(x) = \chi_{A_2}(x) = 0$, $\chi_{A_1 \cap A_2}(x) = 0$, therefore $\chi_{A_1 \cup A_2}(x)= \chi_{A_1}(x) + \chi_{A_2}(x) - \chi_{A_1 \cap A_2}(x) = 0$ \par
-        Summarizing, we have $\chi_{A_1 \cup A_2} = \chi_{A_1} + \chi_{A_2} - \chi_{A_1 \cap A_2}$. \hfill $\square$ 
+        Summarizing, we have $\chi_{A_1 \cup A_2} = \chi_{A_1} + \chi_{A_2} - \chi_{A_1 \cap A_2}$. \hfill $\square$
     \item $\chi_{X ~\backslash~ A_1} = 1 - \chi_{A_1}$.
   \end{enumerate}
-  
+
 \end{document}
