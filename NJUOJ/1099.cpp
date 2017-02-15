@@ -7,7 +7,7 @@ using namespace std;
 struct edge{
     int u, v, w;
 
-    int operator < (edge e){
+    int operator < (const edge& e) const {
         return w<e.w;
     }
 };
