@@ -22,16 +22,16 @@ const int automaton[5][3] =
     {1, 4, 0},
     {3, 0, 0}
 };
-void (*action[5][3])() =
+void (*const action[5][3])() =
 {
     {nop, o_c, o_c},
     {o_o, nop, o_oc},
     {nop, o_ogc, o_ogc},
     {o_s, nop, o_sc},
-    {nop, o_sgc , o_sgc}
+    {nop, o_sgc, o_sgc}
 };
 int main(){
-    int status = 0;
+    int state = 0;
     int trans;
     cin>>n;
     for (int i=0; i<=n; i++){
@@ -41,8 +41,8 @@ int main(){
         case 'g': trans=1; break;
         default: trans=2; break;
         }
-        action[status][trans]();
-        status=automaton[status][trans];
+        action[state][trans]();
+        state=automaton[state][trans];
     }
     return 0;
 }

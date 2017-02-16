@@ -2,6 +2,16 @@
 using namespace std;
 char str[128];
 int n;
+char c;
+
+void nop(){}
+void o_c(){cout<<c;}
+void o_o(){cout<<'o';}
+void o_oc(){cout<<'o'<<c;}
+void o_ogc(){cout<<'o'<<'g'<<c;}
+void o_s(){cout<<"***";}
+void o_sc(){cout<<"***"<<c;}
+void o_sgc(){cout<<"***"<<'g'<<c;}
 
 // trans: 0='o', 1='g', 2=else
 const int automaton[5][3] =
@@ -12,94 +22,27 @@ const int automaton[5][3] =
     {1, 4, 0},
     {3, 0, 0}
 };
-
-void nop(){}
-
-void (*ptr[2])()={nop, nop};
-
+void (*const action[5][3])() =
+{
+    {nop, o_c, o_c},
+    {o_o, nop, o_oc},
+    {nop, o_ogc, o_ogc},
+    {o_s, nop, o_sc},
+    {nop, o_sgc, o_sgc}
+};
 int main(){
-    int status = 1;
-    char c;
+    int state = 0;
+    int trans;
     cin>>n;
     for (int i=0; i<=n; i++){
         if (i<n) cin>>c; else c= '\n';
-        switch (status){
-        case 1:{ // nothing
-            switch (c){
-            case 'o': {
-                status = 2;
-                break;
-            }
-            default: {
-                status = 1;
-                cout << c;
-            }
-            }
-            break;
+        switch (c){
+        case 'o': trans=0; break;
+        case 'g': trans=1; break;
+        default: trans=2; break;
         }
-        case 2:{ // o
-            switch (c){
-            case 'o': {
-                status = 2;
-                cout << 'o';
-                break;
-            }
-            case 'g': {
-                status = 3;
-                break;
-            }
-            default: {
-                status = 1;
-                cout << 'o' << c;
-            }
-            }
-            break;
-        }
-        case 3:{ // og
-            switch (c){
-            case 'o': {
-                status = 4;
-                break;
-            }
-            default: {
-                status = 1;
-                cout << 'o' << 'g' << c;
-            }
-            }
-            break;
-        }
-        case 4:{ // ***
-            switch (c){
-            case 'o': {
-                status = 2;
-                cout << "***";
-                break;
-            }
-            case 'g': {
-                status = 5;
-                break;
-            }
-            default: {
-                status = 1;
-                cout << "***" << c;
-            }
-            }
-            break;
-        }
-        case 5:{ // ***g
-            switch (c){
-            case 'o': {
-                status = 4;
-                break;
-            }
-            default: {
-                status = 1;
-                cout << "***" << 'g' << c;
-            }
-            }
-            break;
-        }
-        }
+        action[state][trans]();
+        state=automaton[state][trans];
     }
     return 0;
 }
