@@ -3,19 +3,19 @@
 #include <string>
 using namespace std;
 
-vector<string> v;
+string v[256];
 int cur = 0;
 int top = 0;
 
 int main(){
     string command;
-    v.push_back("http://www.acm.org/");
+    v[0]="http://www.acm.org/";
+    ios::sync_with_stdio(false);
     while (true){
         cin >> command;
         if (command == "QUIT") return 0;
         if (command == "VISIT"){
             cur++;
-            if (v.size() <= cur) v.resize(v.size()+10, "");
             cin >> v[cur];
             cout << v[cur] << endl;
             top = cur;
